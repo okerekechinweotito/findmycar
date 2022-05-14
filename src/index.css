@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  height: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  width: 100%;
+}
+
+input {
+  text-transform: uppercase;
+}
+
+.splash-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4;
+  flex-direction: column;
+}
+
+.splash-screen h1 {
+  color: #cfd3fd;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.splash-screen p {
+  color: #8a8da8;
+}
+
+.hero_btn {
+  background: #ffee80 !important;
+  color: #130f40 !important;
+  font-weight: bold !important;
+  padding: 5px 35px !important;
+  margin-top: 20px !important;
+}
+
+.hero_btn:hover {
+  background: #f9d806 !important;
+}
+
+.text_card {
+  position: relative;
+}
+
+.text_card::before {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 15%;
+  width: 70%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(10px);
+}
