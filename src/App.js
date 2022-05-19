@@ -1,9 +1,18 @@
-function App() {
+import React from "react";
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav.js";
+import Home from "./routes/Home";
+
+export default function App() {
   return (
-    <div className="App">
-      <h1> Empty React</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
-
-export default App;
