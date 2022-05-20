@@ -5,11 +5,15 @@ body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #d1d1d1;
+  color: #222222;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 .card {
@@ -37,7 +41,29 @@ code {
   background: #ff5c00 !important;
 }
 
-@media screen and (max-width: 1050px) {
+.footer_list_item {
+  width: 50%;
+  margin: 20px 60px;
+  color: #d1d1d1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer_list_item i {
+  color: #ff5c00;
+  margin-top: 5px;
+}
+
+.footer_text {
+  color: #6d6d6d;
+  text-align: center;
+}
+
+.footer_text span {
+  color: #ff5c00;
+}
+
+@media screen and (max-width: 1100px) {
   .hero_img {
     width: 100%;
   }
