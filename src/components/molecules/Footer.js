@@ -1,0 +1,142 @@
+import React from "react";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import RedditIcon from "@mui/icons-material/Reddit";
+import TelegramIcon from "@mui/icons-material/Telegram";
+
+export default function Footer() {
+  return (
+    <>
+      <Box
+        sx={{
+          height: { md: 500, xs: "auto" },
+          mt: 15,
+          background: "#0f1114",
+        }}
+      >
+        <Container sx={{ height: "80%", borderBottom: "1px solid #8a8a8a" }}>
+          <Grid
+            container
+            sx={{
+              height: "100%",
+            }}
+          >
+            <Grid
+              item
+              sx={{
+                display: "block",
+                textAlign: "center",
+                pt: 7,
+              }}
+              lg={4}
+              md={6}
+              xs={12}
+            >
+              <Typography
+                variant="h5"
+                noWrap
+                component="div"
+                sx={{
+                  fontSize: { md: "30px", xs: "25px" },
+                  fontWeight: "bolder",
+                  color: "#e6e6e6",
+                  mb: 1,
+                }}
+              >
+                <span style={{ color: "#ff5c00" }}>Find</span>MyCar
+              </Typography>
+              <Typography
+                variant="p"
+                sx={{
+                  color: "#d1d1d1",
+                }}
+              >
+                Track and Recover your
+                <br /> stolen and missing vehicles
+                <br /> from the comfort and convience <br />
+                of your home.
+              </Typography>
+              <Box>
+                <FacebookIcon sx={{ color: "#ff5c00", margin: 1 }} />
+                <TwitterIcon sx={{ color: "#ff5c00", margin: 1 }} />
+                <GitHubIcon sx={{ color: "#ff5c00", margin: 1 }} />
+                <RedditIcon sx={{ color: "#ff5c00", margin: 1 }} />
+                <TelegramIcon sx={{ color: "#ff5c00", margin: 1 }} />
+              </Box>
+            </Grid>
+            <Grid
+              item
+              sx={{
+                display: "block",
+                pt: 7,
+              }}
+              lg={4}
+              md={6}
+              xs={12}
+            >
+              <Typography
+                variant="h3"
+                sx={{
+                  fontSize: { md: "27px", xs: "25px" },
+                  fontWeight: "bold",
+                  color: "#ff5c00",
+                  textAlign: "center",
+                }}
+              >
+                Our Branches
+              </Typography>
+              <ul>
+                <li className="footer_list_item">
+                  <i class="fas fa-map-marker-alt"></i>Nigeria
+                </li>
+                <li className="footer_list_item">
+                  <i class="fas fa-map-marker-alt"></i>Ghana
+                </li>
+                <li className="footer_list_item">
+                  <i class="fas fa-map-marker-alt"></i>Algeria
+                </li>
+                <li className="footer_list_item">
+                  <i class="fas fa-map-marker-alt"></i>Eygpt
+                </li>
+              </ul>
+            </Grid>
+            <Grid item sx={{ display: "block", pt: 7 }} lg={4} md={6} xs={12}>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontSize: { md: "27px", xs: "25px" },
+                  fontWeight: "bold",
+                  color: "#ff5c00",
+                  textAlign: "center",
+                }}
+              >
+                Contact Info
+              </Typography>
+              <ul>
+                <li className="footer_list_item">
+                  <i className="fas fa-mobile"></i>+2347039240546
+                </li>
+                <li className="footer_list_item">
+                  <i className="fas fa-mobile"></i>+2348175425494
+                </li>
+                <li className="footer_list_item">
+                  <i className="fas fa-envelope-open-text"></i>
+                  findmycar@info.com
+                </li>
+              </ul>
+            </Grid>
+          </Grid>
+          <p className="footer_text">Copyright@2022</p>
+          <p className="footer_text">
+            Made by <span>Okereke Chinweotito</span> & <span>Pius Osuji</span>
+          </p>
+        </Container>
+      </Box>
+    </>
+  );
+}
