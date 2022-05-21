@@ -69,7 +69,7 @@ const HideAppBar = (props) => {
                   display: { xs: "none", md: "flex" },
                   fontWeight: "bolder",
                   color: "#e6e6e6",
-                  letterSpacing: "5px",
+                  letterSpacing: "8px",
                   fontFamily: "Tapestry",
                 }}
               >
@@ -161,7 +161,7 @@ const HideAppBar = (props) => {
                   fontWeight: "bolder",
                   color: "#e6e6e6",
                   fontFamily: "Tapestry",
-                  letterSpacing: "5px",
+                  letterSpacing: "8px",
                 }}
               >
                 <Link

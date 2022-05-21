@@ -1,13 +1,13 @@
 import React from "react";
-import { TextCard } from "../atoms/TextCard";
+import { TextCard } from "../atoms/HomeTextCard";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import InfoCard from "../atoms/InfoCard";
-import ReverseInfoCard from "../atoms/ReverseInfoCard";
+import HomeInfoCard from "../atoms/HomeInfoCard";
+import HomeReverseInfoCard from "../atoms/HomeReverseInfoCard";
 import visit from "./../../assets/visit.svg";
 import investigate from "./../../assets/investigate.svg";
 import form from "./../../assets/form.svg";
-import Heading from "../atoms/Heading";
+import HomeHeading from "../atoms/HomeHeading";
 
 export default function Features() {
   return (
@@ -59,19 +59,19 @@ export default function Features() {
             py: 5,
           }}
         >
-          <Heading name="How It Works" />
-          <InfoCard
+          <HomeHeading name="How It Works" />
+          <HomeInfoCard
             img={visit}
             title="Recover your car"
             info=" Visit us at https://findmycar.netlify.app
             to commence your vehicle recovery process"
           />
-          <ReverseInfoCard
+          <HomeReverseInfoCard
             img={form}
             title="File a report"
             info="Provide the required details on our website to start your vehicle recovery process immediately"
           />
-          <InfoCard
+          <HomeInfoCard
             img={investigate}
             title="The police does the rest"
             info="The police takes the neccessary steps to recover your missing vehicle"
