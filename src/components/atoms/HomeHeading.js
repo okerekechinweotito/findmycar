@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 
-export default function Heading({ name }) {
+export default function HomeHeading({ name }) {
   return (
     <Typography
       variant="h2"
