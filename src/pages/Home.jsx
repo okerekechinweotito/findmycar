@@ -1,14 +1,14 @@
 import React from "react";
-import Hero from "../components/atoms/Hero";
-import Features from "../components/molecules/Features.js";
-import Services from "../components/molecules/Services.js";
+import HomeHero from "../components/molecules/HomeHero";
+import HomeFeatures from "../components/molecules/HomeFeatures.js";
+import HomeServices from "../components/molecules/HomeServices.js";
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Features />
-      <Services />
+      <HomeHero />
+      <HomeFeatures />
+      <HomeServices />
     </>
   );
 }

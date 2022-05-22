@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import HeroImg from "./../../assets/hero_img.png";
 
-export default function Hero() {
+export default function HomeHero() {
   return (
     <>
       <Box

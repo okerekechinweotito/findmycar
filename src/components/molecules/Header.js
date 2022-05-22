@@ -12,6 +12,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from "@mui/material";
 
 const styles = {
   header: {
@@ -68,9 +69,36 @@ const HideAppBar = (props) => {
                   display: { xs: "none", md: "flex" },
                   fontWeight: "bolder",
                   color: "#e6e6e6",
+                  letterSpacing: "8px",
+                  fontFamily: "Tapestry",
                 }}
               >
-                <span style={{ color: "#ff5c00" }}>Find</span>MyCar
+                <Link
+                  href="#"
+                  sx={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    "&:hover": {
+                      color: "#ff5c00",
+                      background: "#0B1D36",
+                      borderRadius: "5px",
+                    },
+                  }}
+                >
+                  <Typography
+                    component="span"
+                    variant="div"
+                    sx={{
+                      color: "#ff5c00",
+                      "&:hover": {
+                        color: "#e6e6e6",
+                      },
+                    }}
+                  >
+                    Find
+                  </Typography>
+                  MyCar
+                </Link>
               </Typography>
 
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -100,10 +128,25 @@ const HideAppBar = (props) => {
                   sx={{
                     display: { xs: "block", md: "none" },
                   }}
+                  MenuListProps={{
+                    style: {
+                      background: "#0a192f",
+                      color: "#ff5c00",
+                      padding: "1em",
+                    },
+                  }}
                 >
                   {pages.map((page) => (
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
+                      <Typography
+                        sx={{
+                          textAlign: "center",
+                          fontFamily: "Tapestry",
+                          fontSize: "1.3em",
+                        }}
+                      >
+                        {page}
+                      </Typography>
                     </MenuItem>
                   ))}
                 </Menu>
@@ -116,10 +159,37 @@ const HideAppBar = (props) => {
                   flexGrow: 1,
                   display: { xs: "flex", md: "none" },
                   fontWeight: "bolder",
-                  color: "#666",
+                  color: "#e6e6e6",
+                  fontFamily: "Tapestry",
+                  letterSpacing: "8px",
                 }}
               >
-                <span style={{ color: "#ff5c00" }}>Find</span>MyCar
+                <Link
+                  href="#"
+                  sx={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    "&:hover": {
+                      color: "#ff5c00",
+                      background: "#0B1D36",
+                      borderRadius: "5px",
+                    },
+                  }}
+                >
+                  <Typography
+                    component="span"
+                    variant="div"
+                    sx={{
+                      color: "#ff5c00",
+                      "&:hover": {
+                        color: "#e6e6e6",
+                      },
+                    }}
+                  >
+                    Find
+                  </Typography>
+                  MyCar
+                </Link>
               </Typography>
               <Box
                 sx={{
@@ -133,9 +203,17 @@ const HideAppBar = (props) => {
                     onClick={handleCloseNavMenu}
                     sx={{
                       pt: 1,
-                      color: "#dddcdc",
+                      color: "#e6e6e6",
                       display: "block",
                       fontWeight: "bold",
+                      fontFamily: "Tapestry",
+                      letterSpacing: "3px",
+                      mr: "4em",
+                      ml: "4em",
+                      background: "#0A192F",
+                      "&:hover": {
+                        color: "#ff5c00",
+                      },
                     }}
                   >
                     {page}

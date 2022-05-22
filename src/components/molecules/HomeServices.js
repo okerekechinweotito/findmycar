@@ -1,8 +1,8 @@
 import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Heading from "./../atoms/Heading.js";
-import ServiceCard from "./../atoms/ServiceCard";
+import HomeHeading from "../atoms/HomeHeading.js";
+import ServiceCard from "../atoms/HomeServiceCard";
 
 export default function Services() {
   return (
@@ -12,7 +12,7 @@ export default function Services() {
           mt: 10,
         }}
       >
-        <Heading name="Our Services" />
+        <HomeHeading name="Our Services" />
         <Grid
           container
           sx={{
