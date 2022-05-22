@@ -38,10 +38,24 @@ export default function Hero() {
             justifyContent: "center",
           }}
         >
-          <img src={HeroImg} alt="" className="hero_img" />
+          <img src={HeroImg} style={{ width: "90%" }} alt="" />
         </Box>
         <Link to="find">
-          <Button className="hero_btn" variant="contained" disableElevation>
+          <Button
+            variant="contained"
+            disableElevation
+            sx={{
+              background: "#fa772b",
+              color: "#fff",
+              fontWeight: "bold",
+              padding: "5px 35px",
+              marginTop: "20px",
+
+              "&:hover": {
+                background: "#ff5c00",
+              },
+            }}
+          >
             Recover
           </Button>
         </Link>

@@ -64,7 +64,21 @@ export default function InfoCard(props) {
           >
             {props.info}
           </Typography>
-          <Button variant="contained" disableElevation className="hero_btn">
+          <Button
+            variant="contained"
+            disableElevation
+            sx={{
+              background: "#fa772b",
+              color: "#fff",
+              fontWeight: "bold",
+              padding: "5px 35px",
+              marginTop: "20px",
+
+              "&:hover": {
+                background: "#ff5c00",
+              },
+            }}
+          >
             Recover
           </Button>
         </Grid>

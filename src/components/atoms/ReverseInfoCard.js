@@ -1,25 +1,22 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 export default function InfoCard(props) {
   return (
     <>
-      <Grid
-        container
+      <Container
         sx={{
           height: { md: 450, xs: "auto" },
           margin: "20px 0",
           padding: "20px 0",
+          display: "flex",
+          flexDirection: { xs: "column-reverse", md: "row" },
         }}
       >
-        {" "}
-        <Grid
-          item
-          lg={6}
-          md={6}
-          xs={12}
+        <Box
           sx={{
             height: { md: "100%", xs: 250 },
             display: "flex",
@@ -51,15 +48,25 @@ export default function InfoCard(props) {
           >
             {props.info}
           </Typography>
-          <Button variant="contained" disableElevation className="hero_btn">
+          <Button
+            variant="contained"
+            disableElevation
+            sx={{
+              background: "#fa772b",
+              color: "#fff",
+              fontWeight: "bold",
+              padding: "5px 35px",
+              marginTop: "20px",
+
+              "&:hover": {
+                background: "#ff5c00",
+              },
+            }}
+          >
             Recover
           </Button>
-        </Grid>
-        <Grid
-          item
-          lg={6}
-          md={6}
-          xs={12}
+        </Box>
+        <Box
           sx={{
             height: { md: "100%", xs: 300 },
             display: "flex",
@@ -68,8 +75,8 @@ export default function InfoCard(props) {
           }}
         >
           <img style={{ height: "100%" }} src={props.img} alt="visit us" />
-        </Grid>
-      </Grid>
+        </Box>
+      </Container>
     </>
   );
 }
