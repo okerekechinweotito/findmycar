@@ -10,7 +10,7 @@ export default function HomeHeading({ name }) {
         textAlign: "center",
         color: "#0a192f",
         fontWeight: "bold",
-        fontSize: { md: 50, xs: 32 },
+        fontSize: { md: 50, xs: 33 },
         mb: 7,
 
         "&:before": {
