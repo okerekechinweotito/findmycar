@@ -78,7 +78,7 @@ export default function HomeHero() {
               fontFamily: "Mochiy Pop One",
               lineHeight: "1.5em",
               fontSize: { xs: "1.5em", xl: "1.em" },
-              mt: "1em",
+              mt: "1.5em",
             }}
           >
             Get your <span style={{ color: "#ff5c00" }}>stolen</span> vehicle
