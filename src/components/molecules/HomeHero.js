@@ -19,6 +19,7 @@ export default function HomeHero() {
           alignItems: { xs: "right", md: "center" },
           justifyContent: "space-around",
           px: { xs: "15px" },
+          pt: 12,
           overflowY: "hidden",
         }}
       >

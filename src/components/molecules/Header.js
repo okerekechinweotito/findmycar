@@ -53,11 +53,7 @@ const HideAppBar = (props) => {
   return (
     <React.Fragment>
       <HideOnScroll {...props}>
-        <AppBar
-          position="sticky"
-          className="globalBackgroundColor"
-          style={styles.header}
-        >
+        <AppBar className="globalBackgroundColor" style={styles.header}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Typography
