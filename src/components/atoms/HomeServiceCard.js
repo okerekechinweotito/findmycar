@@ -8,7 +8,7 @@ export default function ServiceCard(props) {
     <>
       <Box
         sx={{
-          height: { md: 260, xs: 220 },
+          height: { md: 260, xs: 240 },
           margin: "10px 0",
           display: "flex",
           flexDirection: "column",
@@ -53,7 +53,21 @@ export default function ServiceCard(props) {
         >
           {props.info}
         </Typography>
-        <Button variant="contained" disableElevation className="hero_btn">
+        <Button
+          variant="contained"
+          disableElevation
+          sx={{
+            background: "#fa772b",
+            color: "#fff",
+            fontWeight: "bold",
+            padding: "5px 35px",
+            marginTop: "20px",
+
+            "&:hover": {
+              background: "#ff5c00",
+            },
+          }}
+        >
           Recover
         </Button>
       </Box>

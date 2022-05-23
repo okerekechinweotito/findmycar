@@ -9,6 +9,27 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import RedditIcon from "@mui/icons-material/Reddit";
 import TelegramIcon from "@mui/icons-material/Telegram";
 
+const styles = {
+  list_item: {
+    width: "90%",
+    textAlign: "center",
+    color: "#d1d1d1",
+    margin: "20px 0",
+  },
+  i: {
+    color: "#ff5c00",
+    marginTop: "5px",
+    marginRight: "15px",
+  },
+  footer_text: {
+    color: "#6d6d6d",
+    textAlign: "center",
+  },
+  span: {
+    color: "#ff5c00",
+  },
+};
+
 export default function Footer() {
   return (
     <>
@@ -19,11 +40,12 @@ export default function Footer() {
           background: "#0f1114",
         }}
       >
-        <Container sx={{ height: "80%", borderBottom: "1px solid #8a8a8a" }}>
+        <Container sx={{ height: "80%" }}>
           <Grid
             container
             sx={{
               height: "100%",
+              borderBottom: "1px solid #8a8a8a",
             }}
           >
             <Grid
@@ -91,17 +113,21 @@ export default function Footer() {
                 Our Branches
               </Typography>
               <ul>
-                <li className="footer_list_item">
-                  <i class="fas fa-map-marker-alt"></i>Nigeria
+                <li style={styles.list_item}>
+                  <i className="fas fa-map-marker-alt" style={styles.i}></i>
+                  Nigeria
                 </li>
-                <li className="footer_list_item">
-                  <i class="fas fa-map-marker-alt"></i>Ghana
+                <li style={styles.list_item}>
+                  <i className="fas fa-map-marker-alt" style={styles.i}></i>
+                  Ghana
                 </li>
-                <li className="footer_list_item">
-                  <i class="fas fa-map-marker-alt"></i>Algeria
+                <li style={styles.list_item}>
+                  <i className="fas fa-map-marker-alt" style={styles.i}></i>
+                  Algeria
                 </li>
-                <li className="footer_list_item">
-                  <i class="fas fa-map-marker-alt"></i>Eygpt
+                <li style={styles.list_item}>
+                  <i className="fas fa-map-marker-alt" style={styles.i}></i>
+                  Eygpt
                 </li>
               </ul>
             </Grid>
@@ -118,23 +144,32 @@ export default function Footer() {
                 Contact Info
               </Typography>
               <ul>
-                <li className="footer_list_item">
-                  <i className="fas fa-mobile"></i>+2347039240546
+                <li style={styles.list_item}>
+                  <i className="fas fa-mobile" style={styles.i}></i>
+                  +2347039240546
                 </li>
-                <li className="footer_list_item">
-                  <i className="fas fa-mobile"></i>+2348175425494
+                <li style={styles.list_item}>
+                  <i className="fas fa-mobile" style={styles.i}></i>
+                  +2348175425494
                 </li>
-                <li className="footer_list_item">
-                  <i className="fas fa-envelope-open-text"></i>
+                <li style={styles.list_item}>
+                  <i className="fas fa-envelope-open-text" style={styles.i}></i>
                   findmycar@info.com
                 </li>
               </ul>
             </Grid>
           </Grid>
-          <p className="footer_text">Copyright@2022</p>
-          <p className="footer_text">
-            Made by <span>Okereke Chinweotito</span> & <span>Pius Osuji</span>
-          </p>
+          <Box
+            sx={{
+              pb: { xs: "10px", md: "0" },
+            }}
+          >
+            <p style={styles.footer_text}>Copyright@2022</p>
+            <p style={styles.footer_text}>
+              Made by <span style={styles.span}>Okereke Chinweotito</span> &{" "}
+              <span style={styles.span}>Pius Osuji</span>
+            </p>
+          </Box>
         </Container>
       </Box>
     </>
