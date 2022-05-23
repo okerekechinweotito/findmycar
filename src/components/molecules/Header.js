@@ -16,7 +16,7 @@ import { Link } from "@mui/material";
 
 const styles = {
   header: {
-    padding: "1em",
+    padding: "1em 0 1em 1em",
     fontWeight: "bolder",
     background: "#0a192f",
   },
@@ -70,7 +70,7 @@ const HideAppBar = (props) => {
                   fontWeight: "bolder",
                   color: "#e6e6e6",
                   letterSpacing: "8px",
-                  fontFamily: "Tapestry",
+                  fontFamily: "Rubik Wet Paint",
                 }}
               >
                 <Link
@@ -141,7 +141,7 @@ const HideAppBar = (props) => {
                       <Typography
                         sx={{
                           textAlign: "center",
-                          fontFamily: "Tapestry",
+                          fontFamily: "Rubik Wet Paint",
                           fontSize: "1.3em",
                         }}
                       >
@@ -160,7 +160,7 @@ const HideAppBar = (props) => {
                   display: { xs: "flex", md: "none" },
                   fontWeight: "bolder",
                   color: "#e6e6e6",
-                  fontFamily: "Tapestry",
+                  fontFamily: "Rubik Wet Paint",
                   letterSpacing: "8px",
                 }}
               >
@@ -206,7 +206,7 @@ const HideAppBar = (props) => {
                       color: "#e6e6e6",
                       display: "block",
                       fontWeight: "bold",
-                      fontFamily: "Tapestry",
+                      fontFamily: "Rubik Wet Paint",
                       letterSpacing: "3px",
                       mr: "4em",
                       ml: "4em",

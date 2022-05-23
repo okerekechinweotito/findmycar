@@ -1,10 +1,8 @@
 import React from "react";
-import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/molecules/Header.js";
 import Home from "./pages/Home";
 import Footer from "./components/molecules/Footer.js";
-import "./globalStyle.css";
 
 export default function App() {
   return (
