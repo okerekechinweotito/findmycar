@@ -43,7 +43,11 @@ export default function Services() {
           </Grid>
         </Grid>
       </Container>
-      <Container>
+      <Container
+        sx={{
+          mb: 10,
+        }}
+      >
         <Grid
           container
           sx={{
