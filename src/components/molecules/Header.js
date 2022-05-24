@@ -19,6 +19,7 @@ const styles = {
     padding: "1em 0 1em 1em",
     fontWeight: "bolder",
     background: "#0a192f",
+    boxShadow: "none",
   },
 };
 const pages = ["Stolen Cars", "Recovered Cars"];
@@ -74,6 +75,7 @@ const HideAppBar = (props) => {
                   sx={{
                     textDecoration: "none",
                     color: "inherit",
+                    fontSize: "1.2em",
                     "&:hover": {
                       color: "#ff5c00",
                       background: "#0B1D36",
@@ -207,6 +209,7 @@ const HideAppBar = (props) => {
                       mr: "4em",
                       ml: "4em",
                       background: "#0A192F",
+                      fontSize: "1.2em",
                       "&:hover": {
                         color: "#ff5c00",
                       },

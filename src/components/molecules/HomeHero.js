@@ -2,9 +2,35 @@ import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import HeroImg from "./../../assets/hero_img.png";
+import heroImage1 from "./../../assets/heroImage1.png";
+import heroImage2 from "./../../assets/heroImage2.png";
+import heroImage3 from "./../../assets/heroImage3.png";
+import heroImage4 from "./../../assets/heroImage4.png";
 import HomeButton from "../atoms/HomeButton";
 import Link from "@mui/material/Link";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay } from "swiper";
+
+const styles = {
+  swiper: {
+    width: "100%",
+    height: "100%",
+  },
+
+  swiperSlideImg: {
+    display: "block",
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+  },
+};
 
 export default function HomeHero() {
   return (
@@ -70,7 +96,7 @@ export default function HomeHero() {
               transition: "1s",
             }}
           >
-            <img src={HeroImg} alt="Cars" style={{ width: "100%" }} />
+            <img src={heroImage1} alt="Cars" style={{ width: "100%" }} />
           </Box>
           <Typography
             variant="h4"
@@ -107,6 +133,8 @@ export default function HomeHero() {
         <Box
           sx={{
             maxWidth: "50em",
+            height: "50em",
+            maxHeight: "100%",
             mr: { xs: "2em", xl: "5em" },
             cursor: "pointer",
             display: { xs: "none", md: "block" },
@@ -116,9 +144,37 @@ export default function HomeHero() {
             transition: "1s",
           }}
         >
-          <img src={HeroImg} alt="Cars" style={{ width: "100%" }} />
+          <Swiper
+            grabCursor={true}
+            spaceBetween={30}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            style={styles.swiper}
+          >
+            <SwiperSlide style={styles.swiperSlide}>
+              <img src={heroImage1} alt="Cars" style={styles.swiperSlideImg} />
+            </SwiperSlide>
+            <SwiperSlide style={styles.swiperSlide}>
+              <img src={heroImage2} alt="Cars" style={styles.swiperSlideImg} />
+            </SwiperSlide>
+
+            <SwiperSlide style={styles.swiperSlide}>
+              <img src={heroImage3} alt="Cars" style={styles.swiperSlideImg} />
+            </SwiperSlide>
+
+            <SwiperSlide style={styles.swiperSlide}>
+              <img src={heroImage4} alt="Cars" style={styles.swiperSlideImg} />
+            </SwiperSlide>
+          </Swiper>
         </Box>
       </Box>
     </>
   );
 }
+
+/* 
+              <img src={heroImage2} alt="Cars" style={{ width: "100%" }} />;
+ */

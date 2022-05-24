@@ -12,46 +12,14 @@ import HomeHeading from "../atoms/HomeHeading";
 export default function Features() {
   return (
     <>
-      <Container
-        sx={{
-          height: "auto",
-          my: 3,
-          py: 4,
+      <div
+        style={{
+          background: "#0f2731",
+          margin: "0",
+          padding: "0",
+          boxSizing: "border-box",
         }}
       >
-        <Grid
-          container
-          spacing={2}
-          pb={2}
-          mx={"auto"}
-          sx={{
-            width: "100%",
-            justifyContent: "center",
-            borderBottom: "2px solid #d1d1d1",
-          }}
-        >
-          <Grid item xs={9} md={4} lg={4}>
-            <TextCard
-              icon={<i className="fas fa-car-alt"></i>}
-              title="200+ Cars Recovered"
-            />
-          </Grid>
-          <Grid item xs={9} md={4} lg={4}>
-            <TextCard
-              icon={<i className="fas fa-suitcase"></i>}
-              title="350+ Cases Reported"
-            />
-          </Grid>
-          <Grid item xs={9} md={4} lg={4}>
-            <TextCard
-              icon={<i className="fas fa-users"></i>}
-              title="180 Happy Clients"
-            />
-          </Grid>
-        </Grid>
-      </Container>
-
-      <div style={{ background: "#fafafa" }}>
         <Container
           sx={{
             height: "auto",
