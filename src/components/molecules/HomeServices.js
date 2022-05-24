@@ -37,7 +37,7 @@ export default function Services() {
           <Grid item lg={3} md={5} xs={8}>
             <ServiceCard
               title="Car Survellance"
-              icon={<i class="fas fa-video"></i>}
+              icon={<i className="fas fa-video"></i>}
               info="State of the art survellance system that lets you monitor your vehicle"
             />
           </Grid>

@@ -5,10 +5,10 @@ import HomeServices from "../components/molecules/HomeServices.js";
 
 export default function Home() {
   return (
-    <>
+    <article style={{ display: "flex", flexDirection: "column" }}>
       <HomeHero />
       <HomeFeatures />
       <HomeServices />
-    </>
+    </article>
   );
 }
