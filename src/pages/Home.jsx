@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <article style={{ display: "flex", flexDirection: "column" }}>
       <HomeHero />
-      <HomeFeatures />
       <HomeServices />
+      <HomeFeatures />
     </article>
   );
 }
