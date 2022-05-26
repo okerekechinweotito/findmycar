@@ -209,7 +209,7 @@ const HideAppBar = (props) => {
                       mr: "4em",
                       ml: "4em",
                       background: "#0A192F",
-                      fontSize: "1.2em",
+                      fontSize: { md: "0.9em", lg: "1.2em" },
                       "&:hover": {
                         color: "#ff5c00",
                       },

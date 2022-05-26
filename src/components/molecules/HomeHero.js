@@ -37,16 +37,15 @@ export default function HomeHero() {
     <>
       <Box
         sx={{
-          height: { xs: "auto", md: "75vh", lg: "75vh", xl: "75vh" },
+          height: { xs: "auto", md: "auto", lg: "80vh", xl: "80vh" },
           width: "100vw",
           background: "#0a192f",
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: { xs: "column", lg: "row" },
           alignItems: { xs: "right", md: "center" },
           justifyContent: "space-around",
           px: { xs: "15px" },
           pt: 12,
-          overflowY: "hidden",
         }}
       >
         <Box
@@ -61,7 +60,7 @@ export default function HomeHero() {
             },
             maxWidth: { xs: "100%", xl: "50%" },
             px: { xs: "1em", xl: "4em" },
-            overflowY: "hidden",
+            overflow: "hidden",
             mr: "2em",
           }}
         >
@@ -70,12 +69,12 @@ export default function HomeHero() {
             sx={{
               color: "#ff5c00",
               fontWeight: "bold",
-              fontSize: { xs: "1.8em", md: "2.2em", xl: "2.7em" },
+              fontSize: { xs: "1.8em", lg: "2.2em", xl: "2.7em" },
               fontFamily: "Mochiy Pop One",
-              letterSpacing: { xs: "5px", md: "15px" },
+              letterSpacing: { xs: "5px", lg: "15px" },
               overflowY: "hidden",
               mt: "1em",
-              alignSelf: { xs: "center", md: "flex-start" },
+              alignSelf: { xs: "center", lg: "flex-start" },
               lineHeight: "1.5em",
             }}
           >
@@ -88,7 +87,7 @@ export default function HomeHero() {
               mt: { xs: "5em", sm: "2em" },
               mb: "2em",
               cursor: "pointer",
-              display: { xs: "block", md: "none" },
+              display: { xs: "block", lg: "none" },
               alignSelf: "center",
               "&:hover": {
                 transform: "scale(1.1)",
@@ -96,7 +95,47 @@ export default function HomeHero() {
               transition: "1s",
             }}
           >
-            <img src={heroImage1} alt="Cars" style={{ width: "100%" }} />
+            <Swiper
+              grabCursor={true}
+              spaceBetween={30}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              style={styles.swiper}
+            >
+              <SwiperSlide style={styles.swiperSlide}>
+                <img
+                  src={heroImage1}
+                  alt="Cars"
+                  style={styles.swiperSlideImg}
+                />
+              </SwiperSlide>
+              <SwiperSlide style={styles.swiperSlide}>
+                <img
+                  src={heroImage2}
+                  alt="Cars"
+                  style={styles.swiperSlideImg}
+                />
+              </SwiperSlide>
+
+              <SwiperSlide style={styles.swiperSlide}>
+                <img
+                  src={heroImage3}
+                  alt="Cars"
+                  style={styles.swiperSlideImg}
+                />
+              </SwiperSlide>
+
+              <SwiperSlide style={styles.swiperSlide}>
+                <img
+                  src={heroImage4}
+                  alt="Cars"
+                  style={styles.swiperSlideImg}
+                />
+              </SwiperSlide>
+            </Swiper>
           </Box>
           <Typography
             variant="h4"
@@ -115,7 +154,7 @@ export default function HomeHero() {
             component={RouterLink}
             to="/"
             sx={{
-              alignSelf: { xs: "flex-start", sm: "center", md: "flex-start" },
+              alignSelf: { xs: "flex-start", sm: "center", lg: "flex-start" },
               textDecoration: "none",
             }}
           >
@@ -137,7 +176,8 @@ export default function HomeHero() {
             maxHeight: "100%",
             mr: { xs: "2em", xl: "5em" },
             cursor: "pointer",
-            display: { xs: "none", md: "block" },
+            display: { xs: "none", lg: "block" },
+            overflowX: "hidden !important",
             "&:hover": {
               transform: "scale(1.1)",
             },
