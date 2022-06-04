@@ -3,6 +3,8 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scrollbar-color: #ff5c00 #0a192f;
+  scrollbar-width: 13px;
 }
 
 a {
@@ -13,7 +15,13 @@ ul {
   list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff5c00;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a192f;
 }
