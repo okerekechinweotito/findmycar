@@ -37,7 +37,8 @@ export default function Footer() {
         sx={{
           height: { md: 500, xs: "auto" },
           mt: 15,
-          background: "#0f1114",
+          background: "#9da3ab",
+          overflow: "hidden",
         }}
       >
         <Container sx={{ height: "80%" }}>
