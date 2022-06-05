@@ -35,7 +35,7 @@ export default function Features() {
           <HomeReverseInfoCard
             img={form}
             title="File a report"
-            info="File the Vehicle Theft report form and provide the required details. The vehicle details should be as accurate as possible. The more specific and accurate the details are , the higher the chances of recovery"
+            info="Fill the Vehicle Theft report form and provide the required details. The vehicle details should be as accurate as possible. The more specific and accurate the details are , the higher the chances of recovery"
           />
           <HomeInfoCard
             img={investigate}
