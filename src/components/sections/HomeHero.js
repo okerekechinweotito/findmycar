@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -33,6 +33,15 @@ const styles = {
 };
 
 export default function HomeHero() {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <Box
@@ -46,6 +55,9 @@ export default function HomeHero() {
           justifyContent: "space-around",
           px: { xs: "15px" },
           pt: 12,
+        }}
+        style={{
+          transform: `translateY(${offsetY * 0.5}px)`,
         }}
       >
         <Box

@@ -16,6 +16,7 @@ export default function Features() {
           margin: "0",
           padding: "0",
           boxSizing: "border-box",
+          zIndex: "20",
         }}
       >
         <Container
