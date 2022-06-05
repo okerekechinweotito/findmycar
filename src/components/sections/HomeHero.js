@@ -82,7 +82,7 @@ export default function HomeHero() {
           </Typography>
           <Box
             sx={{
-              maxWidth: "30em",
+              maxWidth: "22em",
               mr: { xs: "0em", xl: "5em" },
               mt: { xs: "5em", sm: "2em" },
               mb: "2em",

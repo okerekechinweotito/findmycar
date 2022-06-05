@@ -2,7 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import HomeHeading from "../atoms/HomeHeading.js";
-import ServiceCard from "../atoms/HomeServiceCard";
+import ServiceCard from "../molecules/HomeServiceCard";
 
 export default function Services() {
   return (

@@ -2,8 +2,7 @@ import React from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-
+import HomeButton from "../atoms/HomeButton";
 export default function InfoCard(props) {
   return (
     <>
@@ -11,6 +10,7 @@ export default function InfoCard(props) {
         sx={{
           height: { md: 450, xs: "auto" },
           margin: "20px 0",
+          marginTop: { xs: "2em", md: "5em" },
           padding: "20px 0",
           display: "flex",
           flexDirection: { xs: "column-reverse", md: "row" },
@@ -18,7 +18,7 @@ export default function InfoCard(props) {
       >
         <Box
           sx={{
-            height: { md: "100%", xs: 250 },
+            height: { md: "100%", xs: "100%" },
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -28,9 +28,11 @@ export default function InfoCard(props) {
           <Typography
             variant="h4"
             sx={{
-              color: "#161c2d",
+              color: " #FF5C00",
               fontWeight: "bold",
               fontSize: { md: "35px", xs: "25px" },
+              fontFamily: "Merriweather",
+              mt: { xs: "1em" },
             }}
           >
             {props.title}
@@ -40,31 +42,24 @@ export default function InfoCard(props) {
             mt={2}
             sx={{
               width: "80%",
-              fontSize: { md: "18px", xs: "15px" },
+              fontSize: { md: "25px", xs: "15px" },
               fontWeight: 500,
-              textAlign: "center",
-              color: "#464646",
+              textAlign: "justify",
+              color: "#E6E6E6",
+              fontFamily: "Mochiy Pop One",
+              lineHeight: { xs: "30px", md: "40px" },
             }}
           >
             {props.info}
           </Typography>
-          <Button
-            variant="contained"
-            disableElevation
-            sx={{
-              background: "#fa772b",
-              color: "#fff",
-              fontWeight: "bold",
-              padding: "5px 35px",
-              marginTop: "20px",
-
-              "&:hover": {
-                background: "#ff5c00",
-              },
+          <HomeButton
+            text={"Recover"}
+            style={{
+              padding: "1em 3em",
+              margin: "2em 0",
+              letterSpacing: "5px",
             }}
-          >
-            Recover
-          </Button>
+          />
         </Box>
         <Box
           sx={{

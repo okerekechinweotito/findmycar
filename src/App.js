@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Nav from "./components/molecules/Header.js";
+import Nav from "./components/sections/Header.js";
 import Home from "./pages/Home";
-import Footer from "./components/molecules/Footer.js";
+import Footer from "./components/sections/Footer.js";
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <Footer />
+        {/*   <Footer /> */}
       </BrowserRouter>
     </>
   );
