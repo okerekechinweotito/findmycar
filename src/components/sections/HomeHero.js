@@ -38,7 +38,7 @@ export default function HomeHero() {
       <Box
         sx={{
           position: "fixed",
-          height: { xs: "auto", md: "auto", lg: "80vh", xl: "80vh" },
+          height: { xs: "auto", md: "auto", lg: "90vh", xl: "80vh" },
           width: "100vw",
           background: "#0a192f",
           display: "flex",

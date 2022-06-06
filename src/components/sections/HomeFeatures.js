@@ -18,7 +18,7 @@ export default function Features() {
           padding: "0",
           boxSizing: "border-box",
           position: "absolute",
-          top: { lg: "37em", md: "40em", xs: "49em" },
+          top: { lg: "40em", md: "40em", xs: "49em" },
         }}
       >
         <Container
