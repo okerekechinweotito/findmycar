@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "@mui/material/Container";
+import { Container, Box } from "@mui/material";
 import HomeInfoCard from "../molecules/HomeInfoCard";
 import HomeReverseInfoCard from "../molecules/HomeReverseInfoCard";
 import visit from "./../../assets/visit.svg";
@@ -10,18 +10,20 @@ import HomeHeading from "../atoms/HomeHeading";
 export default function Features() {
   return (
     <>
-      <div
-        style={{
+      <Box
+        sx={{
+          width: "100vw",
           background: "#222f43",
           margin: "0",
           padding: "0",
           boxSizing: "border-box",
+          position: "absolute",
+          top: { lg: "37em", md: "40em", xs: "49em" },
         }}
       >
         <Container
           sx={{
             height: "auto",
-            mt: 10,
             py: 5,
           }}
         >
@@ -43,7 +45,7 @@ export default function Features() {
             info="Your Vehicle Theft Report would be immediately forwarded to the police and other relevant security agencies in the area. Upon recovery we would contact you through the contact details you made available to us"
           />
         </Container>
-      </div>
+      </Box>
     </>
   );
 }

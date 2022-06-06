@@ -37,6 +37,7 @@ export default function HomeHero() {
     <>
       <Box
         sx={{
+          position: "fixed",
           height: { xs: "auto", md: "auto", lg: "80vh", xl: "80vh" },
           width: "100vw",
           background: "#0a192f",
@@ -45,7 +46,7 @@ export default function HomeHero() {
           alignItems: { xs: "right", md: "center" },
           justifyContent: "space-around",
           px: { xs: "15px" },
-          pt: 12,
+          py: 12,
         }}
       >
         <Box
