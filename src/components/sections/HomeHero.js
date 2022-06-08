@@ -9,6 +9,7 @@ import heroImage4 from "./../../assets/heroImage4.png";
 import HomeButton from "../atoms/HomeButton";
 import Link from "@mui/material/Link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FadeIn } from "./../atoms/FadeIn.js";
 
 // Import Swiper styles
 import "swiper/css";
@@ -64,22 +65,24 @@ export default function HomeHero() {
             mr: "2em",
           }}
         >
-          <Typography
-            variant="h1"
-            sx={{
-              color: "#ff5c00",
-              fontWeight: "bold",
-              fontSize: { xs: "1.8em", lg: "2.2em", xl: "2.7em" },
-              fontFamily: "Mochiy Pop One",
-              letterSpacing: { xs: "5px", lg: "15px" },
-              overflowY: "hidden",
-              mt: "1em",
-              alignSelf: { xs: "center", lg: "flex-start" },
-              lineHeight: "1.5em",
-            }}
-          >
-            Recover Your Stolen Car
-          </Typography>
+          <FadeIn>
+            <Typography
+              variant="h1"
+              sx={{
+                color: "#ff5c00",
+                fontWeight: "bold",
+                fontSize: { xs: "1.8em", lg: "2.2em", xl: "2.7em" },
+                fontFamily: "Mochiy Pop One",
+                letterSpacing: { xs: "5px", lg: "15px" },
+                overflowY: "hidden",
+                mt: "1em",
+                alignSelf: { xs: "center", lg: "flex-start" },
+                lineHeight: "1.5em",
+              }}
+            >
+              Recover Your Stolen Car
+            </Typography>
+          </FadeIn>
           <Box
             sx={{
               maxWidth: "22em",
@@ -137,19 +140,21 @@ export default function HomeHero() {
               </SwiperSlide>
             </Swiper>
           </Box>
-          <Typography
-            variant="h4"
-            sx={{
-              color: "#e6e6e6",
-              fontFamily: "Mochiy Pop One",
-              lineHeight: "1.5em",
-              fontSize: { xs: "1.5em", xl: "1.em" },
-              mt: "1.5em",
-            }}
-          >
-            Get your <span style={{ color: "#ff5c00" }}>stolen</span> vehicle
-            back fast with the best Vehicle Theft Recovery System
-          </Typography>
+          <FadeIn>
+            <Typography
+              variant="h4"
+              sx={{
+                color: "#e6e6e6",
+                fontFamily: "Mochiy Pop One",
+                lineHeight: "1.5em",
+                fontSize: { xs: "1.5em", xl: "1.em" },
+                mt: "1.5em",
+              }}
+            >
+              Get your <span style={{ color: "#ff5c00" }}>stolen</span> vehicle
+              back fast with the best Vehicle Theft Recovery System
+            </Typography>
+          </FadeIn>
           <Link
             component={RouterLink}
             to="/"
@@ -158,14 +163,16 @@ export default function HomeHero() {
               textDecoration: "none",
             }}
           >
-            <HomeButton
-              text={"Recover"}
-              style={{
-                padding: "1em 5em",
-                margin: "2em 0",
-                letterSpacing: "5px",
-              }}
-            />
+            <FadeIn>
+              <HomeButton
+                text={"Recover"}
+                style={{
+                  padding: "1em 5em",
+                  margin: "2em 0",
+                  letterSpacing: "5px",
+                }}
+              />
+            </FadeIn>
           </Link>
         </Box>
 
