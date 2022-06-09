@@ -6,7 +6,7 @@ import visit from "./../../assets/visit.svg";
 import investigate from "./../../assets/investigate.svg";
 import form from "./../../assets/form.svg";
 import HomeHeading from "../atoms/HomeHeading";
-import { FadeIn } from "./../atoms/FadeIn.js";
+import { FadeIn } from "./../helperFunctions/FadeInAnimation.js";
 
 export default function Features() {
   return (

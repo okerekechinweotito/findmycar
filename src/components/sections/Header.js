@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
+import { FadeIn } from "../helperFunctions/FadeInAnimation";
 
 const styles = {
   header: {
@@ -56,170 +57,172 @@ const HideAppBar = (props) => {
       <HideOnScroll {...props}>
         <AppBar className="globalBackgroundColor" style={styles.header}>
           <Container maxWidth="xl">
-            <Toolbar disableGutters>
-              <Typography
-                variant="h5"
-                noWrap
-                component="div"
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                  fontWeight: "bolder",
-                  color: "#e6e6e6",
-                  letterSpacing: "8px",
-                  fontFamily: "Rubik Wet Paint",
-                }}
-              >
-                <Link
-                  href="#"
+            <FadeIn>
+              <Toolbar disableGutters>
+                <Typography
+                  variant="h5"
+                  noWrap
+                  component="div"
                   sx={{
-                    textDecoration: "none",
-                    color: "inherit",
-                    fontSize: "1.2em",
-                    "&:hover": {
-                      color: "#ff5c00",
-                      background: "#0B1D36",
-                      borderRadius: "5px",
-                    },
+                    mr: 2,
+                    display: { xs: "none", md: "flex" },
+                    fontWeight: "bolder",
+                    color: "#e6e6e6",
+                    letterSpacing: "8px",
+                    fontFamily: "Rubik Wet Paint",
                   }}
                 >
-                  <Typography
-                    component="span"
-                    variant="div"
+                  <Link
+                    href="#"
                     sx={{
-                      color: "#ff5c00",
+                      textDecoration: "none",
+                      color: "inherit",
+                      fontSize: "1.2em",
                       "&:hover": {
-                        color: "#e6e6e6",
+                        color: "#ff5c00",
+                        background: "#0B1D36",
+                        borderRadius: "5px",
                       },
                     }}
                   >
-                    Find
-                  </Typography>
-                  MyCar
-                </Link>
-              </Typography>
+                    <Typography
+                      component="span"
+                      variant="div"
+                      sx={{
+                        color: "#ff5c00",
+                        "&:hover": {
+                          color: "#e6e6e6",
+                        },
+                      }}
+                    >
+                      Find
+                    </Typography>
+                    MyCar
+                  </Link>
+                </Typography>
 
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                >
-                  <MenuIcon sx={{ color: "#fff" }} />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "left",
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
+                <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+                  <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handleOpenNavMenu}
+                  >
+                    <MenuIcon sx={{ color: "#fff" }} />
+                  </IconButton>
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorElNav}
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left",
+                    }}
+                    keepMounted
+                    transformOrigin={{
+                      vertical: "top",
+                      horizontal: "left",
+                    }}
+                    open={Boolean(anchorElNav)}
+                    onClose={handleCloseNavMenu}
+                    sx={{
+                      display: { xs: "block", md: "none" },
+                    }}
+                    MenuListProps={{
+                      style: {
+                        background: "#0a192f",
+                        color: "#ff5c00",
+                        padding: "1em",
+                      },
+                    }}
+                  >
+                    {pages.map((page) => (
+                      <MenuItem key={page} onClick={handleCloseNavMenu}>
+                        <Typography
+                          sx={{
+                            textAlign: "center",
+                            fontFamily: "Rubik Wet Paint",
+                            fontSize: "1.3em",
+                          }}
+                        >
+                          {page}
+                        </Typography>
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </Box>
+                <Typography
+                  variant="h5"
+                  noWrap
+                  component="div"
                   sx={{
-                    display: { xs: "block", md: "none" },
+                    flexGrow: 1,
+                    display: { xs: "flex", md: "none" },
+                    fontWeight: "bolder",
+                    color: "#e6e6e6",
+                    fontFamily: "Rubik Wet Paint",
+                    letterSpacing: "8px",
                   }}
-                  MenuListProps={{
-                    style: {
-                      background: "#0a192f",
-                      color: "#ff5c00",
-                      padding: "1em",
-                    },
+                >
+                  <Link
+                    href="#"
+                    sx={{
+                      textDecoration: "none",
+                      color: "inherit",
+                      "&:hover": {
+                        color: "#ff5c00",
+                        background: "#0B1D36",
+                        borderRadius: "5px",
+                      },
+                    }}
+                  >
+                    <Typography
+                      component="span"
+                      variant="div"
+                      sx={{
+                        color: "#ff5c00",
+                        "&:hover": {
+                          color: "#e6e6e6",
+                        },
+                      }}
+                    >
+                      Find
+                    </Typography>
+                    MyCar
+                  </Link>
+                </Typography>
+                <Box
+                  sx={{
+                    flexGrow: 1,
+                    display: { xs: "none", md: "flex" },
                   }}
                 >
                   {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography
-                        sx={{
-                          textAlign: "center",
-                          fontFamily: "Rubik Wet Paint",
-                          fontSize: "1.3em",
-                        }}
-                      >
-                        {page}
-                      </Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </Box>
-              <Typography
-                variant="h5"
-                noWrap
-                component="div"
-                sx={{
-                  flexGrow: 1,
-                  display: { xs: "flex", md: "none" },
-                  fontWeight: "bolder",
-                  color: "#e6e6e6",
-                  fontFamily: "Rubik Wet Paint",
-                  letterSpacing: "8px",
-                }}
-              >
-                <Link
-                  href="#"
-                  sx={{
-                    textDecoration: "none",
-                    color: "inherit",
-                    "&:hover": {
-                      color: "#ff5c00",
-                      background: "#0B1D36",
-                      borderRadius: "5px",
-                    },
-                  }}
-                >
-                  <Typography
-                    component="span"
-                    variant="div"
-                    sx={{
-                      color: "#ff5c00",
-                      "&:hover": {
+                    <Button
+                      key={page}
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        pt: 1,
                         color: "#e6e6e6",
-                      },
-                    }}
-                  >
-                    Find
-                  </Typography>
-                  MyCar
-                </Link>
-              </Typography>
-              <Box
-                sx={{
-                  flexGrow: 1,
-                  display: { xs: "none", md: "flex" },
-                }}
-              >
-                {pages.map((page) => (
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      pt: 1,
-                      color: "#e6e6e6",
-                      display: "block",
-                      fontWeight: "bold",
-                      fontFamily: "Rubik Wet Paint",
-                      letterSpacing: "3px",
-                      mr: "4em",
-                      ml: "4em",
-                      background: "#0A192F",
-                      fontSize: { md: "0.9em", lg: "1.2em" },
-                      "&:hover": {
-                        color: "#ff5c00",
-                      },
-                    }}
-                  >
-                    {page}
-                  </Button>
-                ))}
-              </Box>
-            </Toolbar>
+                        display: "block",
+                        fontWeight: "bold",
+                        fontFamily: "Rubik Wet Paint",
+                        letterSpacing: "3px",
+                        mr: "4em",
+                        ml: "4em",
+                        background: "#0A192F",
+                        fontSize: { md: "0.9em", lg: "1.2em" },
+                        "&:hover": {
+                          color: "#ff5c00",
+                        },
+                      }}
+                    >
+                      {page}
+                    </Button>
+                  ))}
+                </Box>
+              </Toolbar>
+            </FadeIn>
           </Container>
         </AppBar>
       </HideOnScroll>
