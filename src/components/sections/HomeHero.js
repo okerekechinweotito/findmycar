@@ -9,6 +9,7 @@ import heroImage4 from "./../../assets/heroImage4.png";
 import HomeButton from "../atoms/HomeButton";
 import Link from "@mui/material/Link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FadeIn } from "../helperFunctions/FadeInAnimation.js";
 
 // Import Swiper styles
 import "swiper/css";
@@ -64,31 +65,130 @@ export default function HomeHero() {
             mr: "2em",
           }}
         >
-          <Typography
-            variant="h1"
+          <FadeIn>
+            <Typography
+              variant="h1"
+              sx={{
+                color: "#ff5c00",
+                fontWeight: "bolder",
+                fontSize: { xs: "1.8em", lg: "2.2em", xl: "2.7em" },
+                fontFamily: "Merriweather",
+                letterSpacing: { xs: "5px", lg: "15px" },
+                overflowY: "hidden",
+                mt: "1em",
+                alignSelf: { xs: "center", lg: "flex-start" },
+                lineHeight: "1.5em",
+              }}
+            >
+              Recover Your Stolen Car
+            </Typography>
+          </FadeIn>
+
+          <FadeIn>
+            <Box
+              sx={{
+                maxWidth: "22em",
+                mr: { xs: "0em", xl: "5em" },
+                mt: { xs: "5em", sm: "2em" },
+                mb: "2em",
+                cursor: "pointer",
+                display: { xs: "block", lg: "none" },
+                alignSelf: "center",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                },
+                transition: "1s",
+              }}
+            >
+              <Swiper
+                grabCursor={true}
+                spaceBetween={30}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+                style={styles.swiper}
+              >
+                <SwiperSlide style={styles.swiperSlide}>
+                  <img
+                    src={heroImage1}
+                    alt="Cars"
+                    style={styles.swiperSlideImg}
+                  />
+                </SwiperSlide>
+                <SwiperSlide style={styles.swiperSlide}>
+                  <img
+                    src={heroImage2}
+                    alt="Cars"
+                    style={styles.swiperSlideImg}
+                  />
+                </SwiperSlide>
+
+                <SwiperSlide style={styles.swiperSlide}>
+                  <img
+                    src={heroImage3}
+                    alt="Cars"
+                    style={styles.swiperSlideImg}
+                  />
+                </SwiperSlide>
+
+                <SwiperSlide style={styles.swiperSlide}>
+                  <img
+                    src={heroImage4}
+                    alt="Cars"
+                    style={styles.swiperSlideImg}
+                  />
+                </SwiperSlide>
+              </Swiper>
+            </Box>
+          </FadeIn>
+          <FadeIn>
+            <Typography
+              variant="h4"
+              sx={{
+                color: "#e6e6e6",
+                fontFamily: "Mochiy Pop One",
+                lineHeight: "2em",
+                fontSize: { xs: "1.5em", xl: "1.em" },
+                mt: "1.5em",
+              }}
+            >
+              Get your <span style={{ color: "#ff5c00" }}>stolen</span> vehicle
+              back fast with the best Vehicle Theft Recovery System
+            </Typography>
+          </FadeIn>
+          <Link
+            component={RouterLink}
+            to="/"
             sx={{
-              color: "#ff5c00",
-              fontWeight: "bold",
-              fontSize: { xs: "1.8em", lg: "2.2em", xl: "2.7em" },
-              fontFamily: "Mochiy Pop One",
-              letterSpacing: { xs: "5px", lg: "15px" },
-              overflowY: "hidden",
-              mt: "1em",
-              alignSelf: { xs: "center", lg: "flex-start" },
-              lineHeight: "1.5em",
+              alignSelf: { xs: "flex-start", sm: "center", lg: "flex-start" },
+              textDecoration: "none",
             }}
           >
-            Recover Your Stolen Car
-          </Typography>
+            <FadeIn>
+              <HomeButton
+                text={"Recover"}
+                style={{
+                  padding: "1em 5em",
+                  margin: "2em 0",
+                  letterSpacing: "5px",
+                }}
+              />
+            </FadeIn>
+          </Link>
+        </Box>
+
+        <FadeIn>
           <Box
             sx={{
-              maxWidth: "22em",
-              mr: { xs: "0em", xl: "5em" },
-              mt: { xs: "5em", sm: "2em" },
-              mb: "2em",
+              maxWidth: "50em",
+              height: "50em",
+              maxHeight: "100%",
+              mr: { xs: "2em", xl: "5em" },
               cursor: "pointer",
-              display: { xs: "block", lg: "none" },
-              alignSelf: "center",
+              display: { xs: "none", lg: "block" },
+              overflowX: "hidden !important",
               "&:hover": {
                 transform: "scale(1.1)",
               },
@@ -137,79 +237,7 @@ export default function HomeHero() {
               </SwiperSlide>
             </Swiper>
           </Box>
-          <Typography
-            variant="h4"
-            sx={{
-              color: "#e6e6e6",
-              fontFamily: "Mochiy Pop One",
-              lineHeight: "1.5em",
-              fontSize: { xs: "1.5em", xl: "1.em" },
-              mt: "1.5em",
-            }}
-          >
-            Get your <span style={{ color: "#ff5c00" }}>stolen</span> vehicle
-            back fast with the best Vehicle Theft Recovery System
-          </Typography>
-          <Link
-            component={RouterLink}
-            to="/"
-            sx={{
-              alignSelf: { xs: "flex-start", sm: "center", lg: "flex-start" },
-              textDecoration: "none",
-            }}
-          >
-            <HomeButton
-              text={"Recover"}
-              style={{
-                padding: "1em 5em",
-                margin: "2em 0",
-                letterSpacing: "5px",
-              }}
-            />
-          </Link>
-        </Box>
-
-        <Box
-          sx={{
-            maxWidth: "50em",
-            height: "50em",
-            maxHeight: "100%",
-            mr: { xs: "2em", xl: "5em" },
-            cursor: "pointer",
-            display: { xs: "none", lg: "block" },
-            overflowX: "hidden !important",
-            "&:hover": {
-              transform: "scale(1.1)",
-            },
-            transition: "1s",
-          }}
-        >
-          <Swiper
-            grabCursor={true}
-            spaceBetween={30}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay]}
-            style={styles.swiper}
-          >
-            <SwiperSlide style={styles.swiperSlide}>
-              <img src={heroImage1} alt="Cars" style={styles.swiperSlideImg} />
-            </SwiperSlide>
-            <SwiperSlide style={styles.swiperSlide}>
-              <img src={heroImage2} alt="Cars" style={styles.swiperSlideImg} />
-            </SwiperSlide>
-
-            <SwiperSlide style={styles.swiperSlide}>
-              <img src={heroImage3} alt="Cars" style={styles.swiperSlideImg} />
-            </SwiperSlide>
-
-            <SwiperSlide style={styles.swiperSlide}>
-              <img src={heroImage4} alt="Cars" style={styles.swiperSlideImg} />
-            </SwiperSlide>
-          </Swiper>
-        </Box>
+        </FadeIn>
       </Box>
     </>
   );
