@@ -8,14 +8,15 @@ function HomeButton({ style, text }) {
       style={style}
       variant="contained"
       sx={{
-        background: "#182c25",
+        background: "#306844",
         fontWeight: "bolder",
         fontFamily: "Rubik Wet Paint",
         fontSize: { xs: "small", xl: "large" },
-        transition: "1s",
+        transition: "0.5s",
 
         "&:hover": {
-          background: "#306844",
+          background: "#182c25",
+          transform: "scale(0.9)",
         },
       }}
     >
