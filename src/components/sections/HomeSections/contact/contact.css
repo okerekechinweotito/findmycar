@@ -1,6 +1,6 @@
 .contact .info-box {
   color: #444444;
-  background: #fafbff;
+  background: #edf1f7;
   padding: 30px;
   box-shadow: 0px 10px 10px 10px rgba(1, 41, 112, 0.08);
   transition: 0.5s;
@@ -32,7 +32,7 @@
   margin-bottom: 0;
 }
 .contact .php-email-form {
-  background: #fafbff;
+  background: #edf1f7;
   padding: 30px;
   height: 100%;
   box-shadow: 0px 10px 10px 10px rgba(1, 41, 112, 0.08);
@@ -104,6 +104,7 @@
   box-shadow: none;
   font-size: 14px;
   border-radius: 0;
+  background-color: #edf1f7;
 }
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {

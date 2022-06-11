@@ -84,6 +84,7 @@ a ::-webkit-scrollbar {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background-color: #edf1f7;
 }
 
 .section-header {

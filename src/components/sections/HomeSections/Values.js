@@ -21,21 +21,21 @@ function Values() {
               description={
                 "We would help you skip all the bureaucratic hiccups and get the police to make your case a maximum priority"
               }
-              src={"https://kuagiresources.com/assets/img/p/features-2.png"}
+              src={"https://i.ibb.co/YLXrXr9/why-us-removebg-preview.png"}
             />
             <ValueCard
               title={"Speed"}
               description={
                 "We would help you skip all the bureaucratic hiccups and get the police to make your case a maximum priority"
               }
-              src={"https://kuagiresources.com/assets/img/p/features-2.png"}
+              src={"https://i.ibb.co/YLXrXr9/why-us-removebg-preview.png"}
             />
             <ValueCard
               title={"Speed"}
               description={
                 "We would help you skip all the bureaucratic hiccups and get the police to make your case a maximum priority"
               }
-              src={"https://kuagiresources.com/assets/img/p/features-2.png"}
+              src={"https://i.ibb.co/YLXrXr9/why-us-removebg-preview.png"}
             />
           </div>
         </FadeIn>
