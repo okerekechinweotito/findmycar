@@ -7,8 +7,9 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  scrollbar-color: #2491df #ffff;
+  scrollbar-color: #2491df #edf1f7;
   scrollbar-width: 13px;
+  background-color: #edf1f7 !important;
 }
 
 a {
@@ -56,6 +57,18 @@ h6 {
   -ms-transition: 1s;
   -o-transition: 1s; */
 }
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2491df;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf1f7;
+}
+
 /* 
 h1:hover,
 h4:hover,
