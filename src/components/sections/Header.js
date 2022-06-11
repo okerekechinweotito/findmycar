@@ -15,14 +15,6 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
 import { FadeIn } from "../helperFunctions/FadeInAnimation";
 
-const styles = {
-  header: {
-    padding: "1em 0 1em 1em",
-    fontWeight: "bolder",
-    background: "#0a192f",
-    boxShadow: "none",
-  },
-};
 const pages = ["Stolen Cars", "Recovered Cars"];
 
 function HideOnScroll(props) {
@@ -55,7 +47,15 @@ const HideAppBar = (props) => {
   return (
     <React.Fragment>
       <HideOnScroll {...props}>
-        <AppBar className="globalBackgroundColor" style={styles.header}>
+        <AppBar
+          className="globalBackgroundColor"
+          sx={{
+            fontWeight: "bolder",
+            background: "#ffff",
+            padding: { xs: "1em 0 1em 1em", lg: "1em 0 1em 4em" },
+          }}
+          id="headerBoxShadow"
+        >
           <Container maxWidth="xl">
             <FadeIn>
               <Toolbar disableGutters>
@@ -66,10 +66,10 @@ const HideAppBar = (props) => {
                   sx={{
                     mr: 2,
                     display: { xs: "none", md: "flex" },
-                    fontWeight: "bolder",
-                    color: "#e6e6e6",
+                    fontWeight: "boldest",
+                    color: "#2491DF",
                     letterSpacing: "8px",
-                    fontFamily: "Rubik Wet Paint",
+                    fontFamily: "Merriweather",
                   }}
                 >
                   <Link
@@ -78,26 +78,17 @@ const HideAppBar = (props) => {
                       textDecoration: "none",
                       color: "inherit",
                       fontSize: "1.2em",
+                      transition: "0.5s",
                       "&:hover": {
-                        color: "#ff5c00",
-                        background: "#0B1D36",
-                        borderRadius: "5px",
+                        color: "#14A800",
+                        transform: "scale(0.9)",
+                        textDecoration: "none",
                       },
                     }}
                   >
-                    <Typography
-                      component="span"
-                      variant="div"
-                      sx={{
-                        color: "#ff5c00",
-                        "&:hover": {
-                          color: "#e6e6e6",
-                        },
-                      }}
-                    >
-                      Find
+                    <Typography component="span" variant="div">
+                      FindMyCar
                     </Typography>
-                    MyCar
                   </Link>
                 </Typography>
 
@@ -108,8 +99,21 @@ const HideAppBar = (props) => {
                     aria-controls="menu-appbar"
                     aria-haspopup="true"
                     onClick={handleOpenNavMenu}
+                    sx={{
+                      transition: "1s",
+                      "&:hover": {
+                        transform: "scale(0.9)",
+                      },
+                    }}
                   >
-                    <MenuIcon sx={{ color: "#fff" }} />
+                    <MenuIcon
+                      sx={{
+                        color: "#2491DF",
+                        "&:hover": {
+                          color: "#14a800",
+                        },
+                      }}
+                    />
                   </IconButton>
                   <Menu
                     id="menu-appbar"
@@ -130,18 +134,28 @@ const HideAppBar = (props) => {
                     }}
                     MenuListProps={{
                       style: {
-                        background: "#0a192f",
-                        color: "#ff5c00",
+                        background: "#ffff",
+                        color: "#2491DF",
                         padding: "1em",
                       },
                     }}
                   >
                     {pages.map((page) => (
-                      <MenuItem key={page} onClick={handleCloseNavMenu}>
+                      <MenuItem
+                        key={page}
+                        onClick={handleCloseNavMenu}
+                        sx={{
+                          transition: "0.5s",
+                          "&:hover": {
+                            color: "#14A800",
+                            transform: "scale(0.9)",
+                          },
+                        }}
+                      >
                         <Typography
                           sx={{
                             textAlign: "center",
-                            fontFamily: "Rubik Wet Paint",
+                            fontFamily: "Merriweather",
                             fontSize: "1.3em",
                           }}
                         >
@@ -159,8 +173,8 @@ const HideAppBar = (props) => {
                     flexGrow: 1,
                     display: { xs: "flex", md: "none" },
                     fontWeight: "bolder",
-                    color: "#e6e6e6",
-                    fontFamily: "Rubik Wet Paint",
+                    color: "##2491DF",
+                    fontFamily: "Merriweather",
                     letterSpacing: "8px",
                   }}
                 >
@@ -168,27 +182,19 @@ const HideAppBar = (props) => {
                     href="#"
                     sx={{
                       textDecoration: "none",
-                      color: "inherit",
+                      color: "#2491DF",
+                      transition: "0.5s",
+                      fontWeight: "boldest",
+
                       "&:hover": {
-                        color: "#ff5c00",
-                        background: "#0B1D36",
-                        borderRadius: "5px",
+                        color: "#14A800",
+                        transform: "scale(0.9)",
                       },
                     }}
                   >
-                    <Typography
-                      component="span"
-                      variant="div"
-                      sx={{
-                        color: "#ff5c00",
-                        "&:hover": {
-                          color: "#e6e6e6",
-                        },
-                      }}
-                    >
-                      Find
+                    <Typography component="span" variant="div">
+                      FindMyCar
                     </Typography>
-                    MyCar
                   </Link>
                 </Typography>
                 <Box
@@ -203,17 +209,20 @@ const HideAppBar = (props) => {
                       onClick={handleCloseNavMenu}
                       sx={{
                         pt: 1,
-                        color: "#e6e6e6",
+                        color: "#2491DF",
                         display: "block",
                         fontWeight: "bold",
-                        fontFamily: "Rubik Wet Paint",
+                        fontFamily: "Merriweather",
                         letterSpacing: "3px",
                         mr: "4em",
                         ml: "4em",
-                        background: "#0A192F",
+                        background: "#ffff",
                         fontSize: { md: "0.9em", lg: "1.2em" },
+                        marginLeft: "auto",
+                        transition: "0.5s",
                         "&:hover": {
-                          color: "#ff5c00",
+                          color: "#14A800",
+                          transform: "scale(0.9)",
                         },
                       }}
                     >
