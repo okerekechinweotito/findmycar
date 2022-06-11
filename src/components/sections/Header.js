@@ -51,7 +51,7 @@ const HideAppBar = (props) => {
           className="globalBackgroundColor"
           sx={{
             fontWeight: "bolder",
-            background: "#ffff",
+            background: " #edf1f7",
             padding: { xs: "1em 0 1em 1em", lg: "1em 0 1em 4em" },
           }}
           id="headerBoxShadow"
@@ -134,7 +134,7 @@ const HideAppBar = (props) => {
                     }}
                     MenuListProps={{
                       style: {
-                        background: "#ffff",
+                        background: " #edf1f7",
                         color: "#2491DF",
                         padding: "1em",
                       },
@@ -216,7 +216,7 @@ const HideAppBar = (props) => {
                         letterSpacing: "3px",
                         mr: "4em",
                         ml: "4em",
-                        background: "#ffff",
+                        background: " #edf1f7",
                         fontSize: { md: "0.9em", lg: "1.2em" },
                         marginLeft: "auto",
                         transition: "0.5s",
