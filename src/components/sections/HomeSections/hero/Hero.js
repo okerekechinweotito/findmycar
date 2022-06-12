@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import HeroImage from "../../../../assets/hero-img3.png";
+import HeroImage from "../../../../assets/hero-img4.svg";
 import HomeButton from "../../../atoms/HomeButton";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
 
@@ -8,7 +8,7 @@ function HomeHero() {
   return (
     <>
       <FadeIn>
-        <section id="hero" className="hero d-flex align-items-center">
+        <section id="hero" className="hero d-flex align-items-center mt-5">
           <div className="container">
             <div className="row ">
               <div className="col-lg-6 d-flex flex-column justify-content-center ">
@@ -35,11 +35,7 @@ function HomeHero() {
                 </div>
               </div>
               <div className="col-lg-6 hero-img ">
-                <img
-                  src="https://uploads-ssl.webflow.com/6006b34c605d36940cc30aad/6075a073d581bd57a0072954_omg-illustration.svg"
-                  className="img-fluid"
-                  alt=""
-                />
+                <img src={HeroImage} className="img-fluid" alt="" />
               </div>
             </div>
           </div>
