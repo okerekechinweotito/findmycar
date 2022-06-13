@@ -13,6 +13,7 @@
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
   cursor: pointer;
+  margin: 2em 1em 1em 1em;
 }
 .recent-blog-posts .post-box:hover {
   transform: scale(0.9);
