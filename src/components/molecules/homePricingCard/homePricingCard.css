@@ -1,6 +1,7 @@
 .pricing-box {
+  height: 42em;
   padding: 40px 20px;
-  background: #edf1f7;
+  background: #fff;
   text-align: center;
   box-shadow: 0px 10px 10px 10px rgba(1, 41, 112, 0.08);
   border-radius: 4px;
@@ -89,4 +90,10 @@
   padding: 1px 0 3px 0;
   background: #14a800;
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .pricing-box {
+    height: auto;
+  }
 }
