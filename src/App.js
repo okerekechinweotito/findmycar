@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/sections/Header.js";
 import Home from "./pages/Home";
-import Footer from "./components/sections/Footer.js";
+import Footer from "./components/sections/footer/Footer";
 import BackToTopButton from "./components/molecules/backToTopButton/BackToTopButton.js";
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
         </Routes>
         <BackToTopButton />
-        {/*   <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );
