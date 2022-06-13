@@ -15,7 +15,19 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
 import { FadeIn } from "../helperFunctions/FadeInAnimation";
 
-const pages = ["Stolen Cars", "Recovered Cars"];
+const pages = ["Stolen Cars", "Recovered Cars", "Blog", "Contact"];
+
+window.onscroll = function () {
+  shadowShow();
+};
+
+function shadowShow() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("headerBoxShadow").classList.add("active");
+  } else {
+    document.getElementById("headerBoxShadow").classList.remove("active");
+  }
+}
 
 function HideOnScroll(props) {
   const { children } = props;
@@ -52,9 +64,10 @@ const HideAppBar = (props) => {
           sx={{
             fontWeight: "bolder",
             background: " #edf1f7",
-            padding: { xs: "1em 0 1em 1em", lg: "1em 0 1em 4em" },
+            padding: { xs: ".5em 0 .5em 1em", lg: ".5em 0 .5em 4em" },
           }}
           id="headerBoxShadow"
+          elevation={0}
         >
           <Container maxWidth="xl">
             <FadeIn>
@@ -68,7 +81,7 @@ const HideAppBar = (props) => {
                     display: { xs: "none", md: "flex" },
                     fontWeight: "boldest",
                     color: "#2491DF",
-                    letterSpacing: "8px",
+                    letterSpacing: "5px",
                     fontFamily: "Merriweather",
                   }}
                 >
@@ -101,6 +114,8 @@ const HideAppBar = (props) => {
                     onClick={handleOpenNavMenu}
                     sx={{
                       transition: "1s",
+                      fontFamily: "'Nunito', sans-serif",
+                      fontWeight: "bold",
                       "&:hover": {
                         transform: "scale(0.9)",
                       },
@@ -146,6 +161,7 @@ const HideAppBar = (props) => {
                         onClick={handleCloseNavMenu}
                         sx={{
                           transition: "0.5s",
+
                           "&:hover": {
                             color: "#14A800",
                             transform: "scale(0.9)",
@@ -155,8 +171,9 @@ const HideAppBar = (props) => {
                         <Typography
                           sx={{
                             textAlign: "center",
-                            fontFamily: "Merriweather",
-                            fontSize: "1.3em",
+                            fontSize: "1.2em",
+                            fontFamily: "'Nunito', sans-serif",
+                            letterSpacing: "2px",
                           }}
                         >
                           {page}
@@ -175,7 +192,7 @@ const HideAppBar = (props) => {
                     fontWeight: "bolder",
                     color: "##2491DF",
                     fontFamily: "Merriweather",
-                    letterSpacing: "8px",
+                    letterSpacing: "4px",
                   }}
                 >
                   <Link
@@ -201,6 +218,8 @@ const HideAppBar = (props) => {
                   sx={{
                     flexGrow: 1,
                     display: { xs: "none", md: "flex" },
+                    justifyContent: "space-evenly",
+                    alignItems: "center",
                   }}
                 >
                   {pages.map((page) => (
@@ -211,14 +230,12 @@ const HideAppBar = (props) => {
                         pt: 1,
                         color: "#2491DF",
                         display: "block",
-                        fontWeight: "bold",
-                        fontFamily: "Merriweather",
-                        letterSpacing: "3px",
-                        mr: "4em",
-                        ml: "4em",
+                        fontWeight: "boldest",
+                        fontFamily: "'Nunito', sans-serif",
+                        letterSpacing: "2px",
                         background: " #edf1f7",
-                        fontSize: { md: "0.9em", lg: "1.2em" },
-                        marginLeft: "auto",
+                        fontSize: { md: "0.9em", lg: "1.0em" },
+                        marginLeft: "3em",
                         transition: "0.5s",
                         "&:hover": {
                           color: "#14A800",
