@@ -13,6 +13,7 @@
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
+  margin: 2em 1em 1em 1em;
 }
 .pricing-box:hover {
   transform: scale(0.9);
