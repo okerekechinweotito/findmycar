@@ -197,7 +197,8 @@
   }
 
   .footer-text {
-    max-width: 35ch;
+    max-width: 50ch;
+    margin-top: 0.7em;
   }
 
   .footer-list:not(:last-of-type) {

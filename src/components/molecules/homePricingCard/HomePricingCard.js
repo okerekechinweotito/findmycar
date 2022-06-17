@@ -27,7 +27,12 @@ function HomePricingCard({
             <span> / mo</span>
           </div>
           <img src={src} className="img-fluid" alt="hub" />
-          <ul style={{ textAlign: "justify", margin: "0 0 1em 1em" }}>
+          <ul
+            style={{
+              textAlign: "justify",
+              margin: "0 0 1em 1em",
+            }}
+          >
             <li>
               {benefit1} &nbsp;{" "}
               <CheckCircleIcon
@@ -35,7 +40,6 @@ function HomePricingCard({
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             </li>
