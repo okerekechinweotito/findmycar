@@ -71,7 +71,7 @@ function Services() {
             icon={<SupportAgent />}
             title={"24/7 Technical Support"}
             description={
-              "Our technical team is always avaliable and willing to offer assistance for any difficulty you may encounter. We are just a call or email away and you can be assured we will always respond"
+              "Our technical team is always avaliable and willing to offer assistance for any difficulty you may encounter. We are just a call or email away"
             }
           />
         </div>

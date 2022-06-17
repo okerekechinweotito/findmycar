@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import HeroImage from "../../../../assets/hero-img4.svg";
+import HeroImage from "../../../../assets/Parking-amico.svg";
 import HomeButton from "../../../atoms/HomeButton";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
 
@@ -35,7 +35,12 @@ function HomeHero() {
                 </div>
               </div>
               <div className="col-lg-6 hero-img ">
-                <img src={HeroImage} className="img-fluid" alt="" />
+                <img
+                  src={HeroImage}
+                  className="img-fluid"
+                  alt=""
+                  style={{ margin: "-5em 0 0 0" }}
+                />
               </div>
             </div>
           </div>
