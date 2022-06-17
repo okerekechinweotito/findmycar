@@ -1,12 +1,12 @@
 import React from "react";
 import HomeServicesCard from "../../molecules/homeServicesCard/homeServicesCard";
-import LocalTaxi from "@mui/icons-material/LocalTaxi";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 import LocationOn from "@mui/icons-material/LocationOn";
 import ScreenLockRotation from "@mui/icons-material/ScreenLockRotation";
 import SupportAgent from "@mui/icons-material/SupportAgent";
 import CarCrash from "@mui/icons-material/CarCrash";
 import DirectionsCarFilled from "@mui/icons-material/DirectionsCarFilled";
+import ElectricRickshawIcon from "@mui/icons-material/ElectricRickshaw";
 
 function Services() {
   return (
@@ -24,7 +24,7 @@ function Services() {
         <div className="row gy-4">
           <HomeServicesCard
             borderBottomColor={"blue"}
-            icon={<DirectionsCarFilled />} 
+            icon={<DirectionsCarFilled />}
             title={"Vehicle Recovery"}
             description={
               "We specialize in the recovery of stolen cars and vehicles. The happiness of our clients is of the utmost priority. so we always deliver without excuse"
@@ -42,7 +42,7 @@ function Services() {
 
           <HomeServicesCard
             borderBottomColor={"green"}
-            icon={<LocalTaxi />}
+            icon={<ElectricRickshawIcon />}
             title={"Armed Excorts"}
             description={
               "Your safety and security is our No.1 priority. so on your request we can provide armed excorts to accompany you to whereever you want to secure you and your vehicle"

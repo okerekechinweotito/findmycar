@@ -2,9 +2,9 @@ import React from "react";
 import ValueCard from "../../molecules/homeValuesCard/HomeValueCard";
 import { Box } from "@mui/material";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
-import ValueImg1 from "../../../assets/valueimg1.svg"
-import ValueImg2 from "../../../assets/valueimg2.svg"
-import ValueImg3 from "../../../assets/valueimg3.svg"
+import ValueImg1 from "../../../assets/valueimg1.svg";
+import ValueImg2 from "../../../assets/valueimg2.svg";
+import ValueImg3 from "../../../assets/valueimg3.svg";
 
 function Values() {
   return (
@@ -18,11 +18,11 @@ function Values() {
         </FadeIn>
 
         <FadeIn>
-          <div className="row"> 
+          <div className="row">
             <ValueCard
               title={"Security"}
               description={
-                "Our encryption protocols is one of the very best in the industry. So your data and information are safe with us"
+                "Our security measures ensures that your vehicles are protected at all times"
               }
               src={ValueImg1}
             />

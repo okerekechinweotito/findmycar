@@ -59,7 +59,7 @@ function Footer() {
 
                 <li>
                   <a href="#" className="footer-link">
-                    Help center
+                    Services
                   </a>
                 </li>
 
@@ -71,13 +71,13 @@ function Footer() {
 
                 <li>
                   <a href="#" className="footer-link">
-                    Privacy policy
+                    Values
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className="footer-link">
-                    Terms & conditions
+                    Pricing Plans
                   </a>
                 </li>
               </ul>
@@ -95,11 +95,6 @@ function Footer() {
                 <li>
                   <a href="#" className="footer-link">
                     Stolen Vehicles
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="footer-link">
-                    Pricing plans
                   </a>
                 </li>
               </ul>
