@@ -1,6 +1,8 @@
 import React from "react";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 import HomePricingCard from "../../molecules/homePricingCard/HomePricingCard";
+import GppBadIcon from "@mui/icons-material/GppBad";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 function Pricing() {
   return (
@@ -25,6 +27,36 @@ function Pricing() {
             src={
               "https://previews.123rf.com/images/jemastock/jemastock1711/jemastock171113569/90255474-car-gps-tracker-technology-icon-vector-illustration-graphic-design.jpg"
             }
+            icon={
+              <GppBadIcon
+                sx={{
+                  color: "red",
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon2={
+              <GppBadIcon
+                sx={{
+                  color: "red",
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon3={
+              <GppBadIcon
+                sx={{
+                  color: "red",
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
           />
           <HomePricingCard
             styles={{ color: "#14A800" }}
@@ -37,6 +69,36 @@ function Pricing() {
             src={
               "https://cdn.w600.comps.canstockphoto.com/gps-car-tracking-eps-vector_csp59597388.jpg"
             }
+            icon={
+              <CheckCircleIcon
+                color="success"
+                sx={{
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon2={
+              <GppBadIcon
+                sx={{
+                  color: "red",
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon3={
+              <GppBadIcon
+                sx={{
+                  color: "red",
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
           />
           <HomePricingCard
             styles={{ color: "#FF901C" }}
@@ -47,6 +109,36 @@ function Pricing() {
             benefit3={"Access to our blog"}
             benefit4={"Access to our database"}
             src={"https://media.istockphoto.com/vectors/-vector-id1149902500"}
+            icon={
+              <CheckCircleIcon
+                color="success"
+                sx={{
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon2={
+              <CheckCircleIcon
+                color="success"
+                sx={{
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon3={
+              <GppBadIcon
+                sx={{
+                  color: "red",
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
           />
           <HomePricingCard
             styles={{ color: " #B715E0" }}
@@ -58,6 +150,36 @@ function Pricing() {
             benefit4={"Access to our database"}
             src={
               "https://cdn1.vectorstock.com/i/1000x1000/44/85/autonomous-car-technology-vector-22414485.jpg"
+            }
+            icon={
+              <CheckCircleIcon
+                color="success"
+                sx={{
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon2={
+              <CheckCircleIcon
+                color="success"
+                sx={{
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
+            }
+            icon3={
+              <CheckCircleIcon
+                color="success"
+                sx={{
+                  position: "absolute",
+                  right: "1em",
+                  fontFamily: "Merriweather",
+                }}
+              />
             }
           />
         </div>

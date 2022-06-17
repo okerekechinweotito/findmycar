@@ -11,6 +11,9 @@ function HomePricingCard({
   benefit2,
   benefit3,
   benefit4,
+  icon,
+  icon2,
+  icon3,
 }) {
   return (
     <div className="col-lg-3 col-md-6 ">
@@ -37,26 +40,14 @@ function HomePricingCard({
               />
             </li>
             <li>
-              {benefit2} &nbsp;{" "}
-              <CheckCircleIcon
-                color="success"
-                sx={{ position: "absolute", right: "1em" }}
-              />
+              {benefit2} &nbsp; {icon}
             </li>
             <li>
-              {benefit3} &nbsp;{" "}
-              <CheckCircleIcon
-                color="success"
-                sx={{ position: "absolute", right: "1em" }}
-              />
+              {benefit3} &nbsp; {icon2}
             </li>
 
             <li>
-              {benefit4} &nbsp;{" "}
-              <CheckCircleIcon
-                color="success"
-                sx={{ position: "absolute", right: "1em" }}
-              />
+              {benefit4} &nbsp; {icon3}
             </li>
           </ul>
           <a

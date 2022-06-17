@@ -2,6 +2,9 @@ import React from "react";
 import ValueCard from "../../molecules/homeValuesCard/HomeValueCard";
 import { Box } from "@mui/material";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import ValueImg1 from "../../../assets/valueimg1.svg";
+import ValueImg2 from "../../../assets/valueimg2.svg";
+import ValueImg3 from "../../../assets/valueimg3.svg";
 
 function Values() {
   return (
@@ -17,25 +20,25 @@ function Values() {
         <FadeIn>
           <div className="row">
             <ValueCard
-              title={"Speed"}
+              title={"Security"}
               description={
-                "We would help you skip all the bureaucratic hiccups and get the police to make your case a maximum priority"
+                "Our security measures ensures that your vehicles are protected at all times"
               }
-              src={"https://i.ibb.co/YLXrXr9/why-us-removebg-preview.png"}
+              src={ValueImg1}
             />
             <ValueCard
               title={"Speed"}
               description={
                 "We would help you skip all the bureaucratic hiccups and get the police to make your case a maximum priority"
               }
-              src={"https://i.ibb.co/YLXrXr9/why-us-removebg-preview.png"}
+              src={ValueImg2}
             />
             <ValueCard
-              title={"Speed"}
+              title={"Competence"}
               description={
-                "We would help you skip all the bureaucratic hiccups and get the police to make your case a maximum priority"
+                "Our team is made up of highly skilled police and millitary personnel who are always able to recover your vehicles"
               }
-              src={"https://i.ibb.co/YLXrXr9/why-us-removebg-preview.png"}
+              src={ValueImg3}
             />
           </div>
         </FadeIn>
