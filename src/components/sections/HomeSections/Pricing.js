@@ -21,9 +21,9 @@ function Pricing() {
             plan={"Basic Plan"}
             amount={"0"}
             benefit1={"Vehicle Theft Report"}
-            benefit2={"Free Car Safety Tips"}
-            benefit3={"Access to our blog"}
-            benefit4={"Access to our database"}
+            benefit2={"24/7 Technical Support"}
+            benefit3={"Tracker Installation"}
+            benefit4={"Vehicle Insurance"}
             src={
               "https://previews.123rf.com/images/jemastock/jemastock1711/jemastock171113569/90255474-car-gps-tracker-technology-icon-vector-illustration-graphic-design.jpg"
             }
@@ -33,7 +33,6 @@ function Pricing() {
                   color: "red",
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -43,7 +42,6 @@ function Pricing() {
                   color: "red",
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -53,7 +51,6 @@ function Pricing() {
                   color: "red",
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -63,9 +60,9 @@ function Pricing() {
             plan={"Standard Plan"}
             amount={"10,000"}
             benefit1={"Vehicle Theft Report"}
-            benefit2={"Free Car Safety Tips"}
-            benefit3={"Access to our blog"}
-            benefit4={"Access to our database"}
+            benefit2={"24/7 Technical Support"}
+            benefit3={"Tracker Installation"}
+            benefit4={"Vehicle Insurance"}
             src={
               "https://cdn.w600.comps.canstockphoto.com/gps-car-tracking-eps-vector_csp59597388.jpg"
             }
@@ -75,7 +72,6 @@ function Pricing() {
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -85,7 +81,6 @@ function Pricing() {
                   color: "red",
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -95,7 +90,6 @@ function Pricing() {
                   color: "red",
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -105,9 +99,9 @@ function Pricing() {
             plan={"Gold Plan"}
             amount={"50,000"}
             benefit1={"Vehicle Theft Report"}
-            benefit2={"Free Car Safety Tips"}
-            benefit3={"Access to our blog"}
-            benefit4={"Access to our database"}
+            benefit2={"24/7 Technical Support"}
+            benefit3={"Tracker Installation"}
+            benefit4={"Vehicle Insurance"}
             src={"https://media.istockphoto.com/vectors/-vector-id1149902500"}
             icon={
               <CheckCircleIcon
@@ -115,7 +109,6 @@ function Pricing() {
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -125,7 +118,6 @@ function Pricing() {
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -135,7 +127,6 @@ function Pricing() {
                   color: "red",
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -145,9 +136,9 @@ function Pricing() {
             plan={"Platinum Plan"}
             amount={"100,000"}
             benefit1={"Vehicle Theft Report"}
-            benefit2={"Free Car Safety Tips"}
-            benefit3={"Access to our blog"}
-            benefit4={"Access to our database"}
+            benefit2={"24/7 Technical Support"}
+            benefit3={"Tracker Installation"}
+            benefit4={"Vehicle Insurance"}
             src={
               "https://cdn1.vectorstock.com/i/1000x1000/44/85/autonomous-car-technology-vector-22414485.jpg"
             }
@@ -157,7 +148,6 @@ function Pricing() {
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -167,7 +157,6 @@ function Pricing() {
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }
@@ -177,7 +166,6 @@ function Pricing() {
                 sx={{
                   position: "absolute",
                   right: "1em",
-                  fontFamily: "Merriweather",
                 }}
               />
             }

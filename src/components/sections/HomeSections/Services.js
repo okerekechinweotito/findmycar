@@ -27,7 +27,16 @@ function Services() {
             icon={<DirectionsCarFilled />}
             title={"Vehicle Recovery"}
             description={
-              "We specialize in the recovery of stolen cars and vehicles. The happiness of our clients is of the utmost priority. so we always deliver without excuse"
+              "We specialize in the recovery of stolen cars and vehicles. The happiness of our clients is of the utmost priority, we would help you recover your vehicle in no time"
+            }
+          />
+
+          <HomeServicesCard
+            borderBottomColor={"purple"}
+            icon={<LocationOn />}
+            title={"Tracker Installation"}
+            description={
+              "We provide Car GPS Installation services at affordable rate. GPS units provide a handy way for vehicle owners like you to keep track of their vehicles at all times"
             }
           />
 
@@ -37,15 +46,6 @@ function Services() {
             title={"Security Gadgets"}
             description={
               "We provide a range of gadgets and tools that increase the all round security of your vehicle. Tools like an alarm system, remote lock and gear lock"
-            }
-          />
-
-          <HomeServicesCard
-            borderBottomColor={"green"}
-            icon={<ElectricRickshawIcon />}
-            title={"Armed Excorts"}
-            description={
-              "Your safety and security is our No.1 priority. so on your request we can provide armed excorts to accompany you to whereever you want to secure you and your vehicle"
             }
           />
           <HomeServicesCard
@@ -58,11 +58,11 @@ function Services() {
           />
 
           <HomeServicesCard
-            borderBottomColor={"purple"}
-            icon={<LocationOn />}
-            title={"Tracker Installation"}
+            borderBottomColor={"green"}
+            icon={<ElectricRickshawIcon />}
+            title={"Armed Excorts"}
             description={
-              "We provide Car GPS Installation services at affordable rate. GPS units provide a handy way for vehicle owners like you to keep track of their vehicles at all times"
+              "Your safety and security is our No.1 priority. so on your request we can provide armed excorts to accompany you to whereever you want to secure you and your vehicle"
             }
           />
 
