@@ -92,7 +92,7 @@
 
 .footer-list:last-of-type {
   width: 100%;
-  column-count: 2;
+  column-count: 1;
 }
 
 .footer-list-title {

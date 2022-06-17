@@ -14,7 +14,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
         </Routes>
         <BackToTopButton />
-        <Footer />
+       <Footer />
       </BrowserRouter>
     </>
   );

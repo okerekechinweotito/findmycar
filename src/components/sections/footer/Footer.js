@@ -41,19 +41,13 @@ function Footer() {
 
                 <li>
                   <a href="#" className="footer-link">
-                    Pricing plans
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
                     Our blog
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className="footer-link">
-                    Contacts
+                    Contact Us
                   </a>
                 </li>
               </ul>
@@ -65,79 +59,42 @@ function Footer() {
 
                 <li>
                   <a href="#" className="footer-link">
-                    Help center
+                    Services
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className="footer-link">
-                    Ask a question
+                    Tips
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className="footer-link">
-                    Privacy policy
+                    Values
                   </a>
                 </li>
 
                 <li>
                   <a href="#" className="footer-link">
-                    Terms & conditions
+                    Pricing Plans
                   </a>
                 </li>
               </ul>
 
               <ul className="footer-list">
                 <li>
-                  <p className="footer-list-title">Neighborhoods in New York</p>
+                  <p className="footer-list-title">Quick Links</p>
                 </li>
 
                 <li>
                   <a href="#" className="footer-link">
-                    Manhattan
+                    Recovered Cars
                   </a>
                 </li>
-
                 <li>
                   <a href="#" className="footer-link">
-                    Central New York City
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
-                    Upper East Side
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
-                    Queens
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
-                    Theater District
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
-                    Midtown
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
-                    SoHo
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="footer-link">
-                    Chelsea
+                    Stolen Vehicles
                   </a>
                 </li>
               </ul>
