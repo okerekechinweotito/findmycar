@@ -2,6 +2,7 @@ import React from "react";
 import "./tips.css";
 import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import TipsImg from "../../../../assets/tips.jpg";
 function Tips() {
   return (
     <section id="features" className="features">
@@ -123,11 +124,7 @@ function Tips() {
             </div>
 
             <div className="col-lg-6">
-              <img
-                src="https://kuagiresources.com/assets/img/IMG-5314.jpg"
-                className="img-fluid"
-                alt=""
-              />
+              <img src={TipsImg} className="img-fluid" alt="" />
             </div>
           </div>
         </div>
