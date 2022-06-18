@@ -59,7 +59,7 @@ function HomePricingCard({
             className="btn-buy"
             style={{ textDecoration: "none" }}
           >
-            Buy Now
+            Find Out More
           </a>
         </div>
       </FadeIn>
