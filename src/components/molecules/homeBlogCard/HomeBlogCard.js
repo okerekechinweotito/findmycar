@@ -2,9 +2,9 @@ import React from "react";
 import "./homeBlogCard.css";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 
-function HomeBlogCard({ date, title, src }) {
+function HomeBlogCard({ date, title, src, link }) {
   return (
-    <div className="col-lg-4">
+    <a href={link} className="col-lg-4" id="blogLink">
       <FadeIn>
         <div className="post-box">
           <div className="post-img" style={{ height: "300px" }}>
@@ -19,7 +19,7 @@ function HomeBlogCard({ date, title, src }) {
           <h3 className="post-title">{title}</h3>
         </div>
       </FadeIn>
-    </div>
+    </a>
   );
 }
 

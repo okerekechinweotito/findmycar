@@ -15,26 +15,37 @@ function Blog() {
 
         <div className="row">
           <HomeBlogCard
-            src={"https://kuagiresources.com/assets/img/Kuagi/IMG-4875.JPG"}
+            src={
+              "https://autojosh.com/wp-content/uploads/2019/12/Taiwo-Hassan-Ogogo-Toyota-venza.jpg"
+            }
             title={
-              "Yearly Analysis and statistics on the number of stolen cars in Nigeria"
+              "Here are 11 Most Stolen Vehicle Models In Nigeria (Photos) "
             }
             date={"Fri, June 10"}
+            link={"https://autojosh.com/11-most-stolen-cars-in-nigeria/"}
           />
           <HomeBlogCard
-            src={"https://kuagiresources.com/assets/img/Kuagi/IMG-4875.JPG"}
-            title={
-              "Yearly Analysis and statistics on the number of stolen cars in Nigeria"
+            src={
+              "https://autojosh.com/wp-content/uploads/2020/01/2005-lexus-rx-nigeria-autojosh.jpg"
             }
-            date={"Fri, June 10"}
+            title={
+              "Only 5 of every 10 stolen vehicles are recovered in Nigeria"
+            }
+            date={"Tuesday, June 14"}
+            link={
+              "https://businessday.ng/uncategorized/article/5-every-10-stolen-vehicles-recovered-nigeria/"
+            }
           />
 
           <HomeBlogCard
-            src={"https://kuagiresources.com/assets/img/Kuagi/IMG-4875.JPG"}
-            title={
-              "Yearly Analysis and statistics on the number of stolen cars in Nigeria"
+            src={
+              "https://autojosh.com/wp-content/uploads/2020/01/2007-toyota-camry-autojosh.jpg"
             }
-            date={"Fri, June 10"}
+            title={"Best Tips on How to Avoid Buying a stolen car in Nigeria"}
+            date={"Monday, June 20"}
+            link={
+              "https://www.carmart.ng/public/blog/how-to-avoid-buying-a-stolen-car-in-nigeria/"
+            }
           />
         </div>
       </div>
