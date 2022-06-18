@@ -15,7 +15,7 @@ function HomeButton({ style, text }) {
         transition: "0.5s",
 
         "&:hover": {
-          background: "#182c25",
+          background: "#14A800",
           transform: "scale(0.9)",
         },
       }}
