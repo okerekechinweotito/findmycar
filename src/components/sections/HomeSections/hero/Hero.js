@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import HeroImage from "../../../../assets/Parking-amico.svg";
+import HeroImage from "../../../../assets/heroImg.svg";
 import HomeButton from "../../../atoms/HomeButton";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
 
