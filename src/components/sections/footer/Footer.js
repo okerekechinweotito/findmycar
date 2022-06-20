@@ -7,6 +7,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import "./footer.css";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { Link } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -16,9 +18,9 @@ function Footer() {
           <FadeIn>
             <div className="footer-top">
               <div className="footer-brand">
-                <a href="#" className="logo">
+                <Link component={RouterLink} to="/" className="logo">
                   FindMyCar
-                </a>
+                </Link>
 
                 <p className="footer-text">
                   FindMyCar is a private security company that offers vehicle
@@ -34,21 +36,21 @@ function Footer() {
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#about" className="footer-link">
                     About us
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#recent-blog-posts" className="footer-link">
                     Our blog
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#contact" className="footer-link">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
@@ -58,27 +60,27 @@ function Footer() {
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#services" className="footer-link">
                     Services
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#features" className="footer-link">
                     Tips
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#values" className="footer-link">
                     Values
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link href="#pricing" className="footer-link">
                     Pricing Plans
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
@@ -88,14 +90,14 @@ function Footer() {
                 </li>
 
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link component={RouterLink} to="/" className="footer-link">
                     Recovered Cars
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="footer-link">
+                  <Link component={RouterLink} to="/" className="footer-link">
                     Stolen Vehicles
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -104,48 +106,48 @@ function Footer() {
             <ul className="social-list">
               <FadeIn>
                 <li>
-                  <a href="#" className="social-link">
+                  <Link href="#contact" className="social-link">
                     <FacebookIcon className="footerIcon" />
-                  </a>
+                  </Link>
                 </li>
               </FadeIn>
               <FadeIn>
                 <li>
-                  <a href="#" className="social-link">
+                  <Link href="#contact" className="social-link">
                     <TwitterIcon className="footerIcon" />
-                  </a>
+                  </Link>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <a href="#" className="social-link">
+                  <Link href="#contact" className="social-link">
                     <InstagramIcon className="footerIcon" />
-                  </a>
+                  </Link>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <a href="#" className="social-link">
+                  <Link href="#contact" className="social-link">
                     <LinkedInIcon className="footerIcon" />
-                  </a>
+                  </Link>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <a href="#" className="social-link">
+                  <Link href="#contact" className="social-link">
                     <YouTubeIcon className="footerIcon" />
-                  </a>
+                  </Link>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <a href="#" className="social-link">
+                  <Link href="#contact" className="social-link">
                     <ion-icon name="mail-outline"></ion-icon>
-                  </a>
+                  </Link>
                 </li>
               </FadeIn>
             </ul>
