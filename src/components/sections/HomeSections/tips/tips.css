@@ -77,6 +77,11 @@
   margin-bottom: 20px;
   text-align: center;
 }
+
+#tipsImg {
+  margin: 1em 0 0 0;
+}
+
 @media (max-width: 768px) {
   .features .feature-icons h3 {
     font-size: 28px;
@@ -100,4 +105,10 @@
 .features .feature-icons .content .icon-box p {
   font-size: 15px;
   color: #848484;
+}
+
+@media (min-width: 1200px) {
+  #tipsImg {
+    margin: -5em 0 0 0;
+  }
 }
