@@ -2,6 +2,17 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2491df;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf1f7;
+}
+
 body,
 html {
   margin: 0;
@@ -51,57 +62,23 @@ h5,
 h6 {
   font-family: "Nunito", sans-serif;
   color: rgb(36, 145, 223);
-  /*  transition: 1s;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s; */
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
-::-webkit-scrollbar-thumb {
-  background: #2491df;
-}
-
-::-webkit-scrollbar-track {
-  background: #edf1f7;
-}
-
-/* 
-h1:hover,
-h4:hover,
-h5:hover,
-h6:hover,
-p:hover {
-  color: #14a800 !important;
-  cursor: pointer;
-  transform: scale(0.9);
-}
-
-a ::-webkit-scrollbar {
-  width: 20px;
-}
-::-webkit-scrollbar-thumb {
-  background: #2491df;
-}
-
-::-webkit-scrollbar-track {
-  background: #ffff;
-}
- */
-
-#headerBoxShadow.active {
-  box-shadow: 0 4px 4px rgba(170, 170, 170, 0.4);
-}
-/*--------------------------------------------------------------
-# Sections
---------------------------------------------------------------*/
 section {
   padding: 60px 0;
   overflow: hidden;
   background-color: #edf1f7;
+}
+
+input,
+textarea {
+  color: #2491df !important;
+  letter-spacing: 2px !important;
+}
+/* Classes and ID Specific */
+
+#headerBoxShadow.active {
+  box-shadow: 0 4px 4px rgba(170, 170, 170, 0.4);
 }
 
 .section-header {

@@ -1,11 +1,36 @@
-import React from "react";
+import * as React from "react";
 import "./contact.css";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
+import EmailIcon from "@mui/icons-material/Email";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import { Typography, Box, Modal, Fade, Backdrop } from "@mui/material";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  borderRadius: 2,
+  boxShadow: 24,
+  p: 4,
+  display: "flex",
+  alignItems: "center",
+};
+
 function Contact() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  function resetForm() {
+    document.getElementById("form").reset();
+  }
+
   return (
     <section id="contact" className="contact">
       <FadeIn>
@@ -25,7 +50,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: " #14a800",
+                          color: " #2491DF",
                         }}
                       />
                     </i>
@@ -44,7 +69,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: " #14a800",
+                          color: "#2491DF",
                         }}
                       />
                     </i>
@@ -63,7 +88,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: " #14a800",
+                          color: " #2491DF",
                         }}
                       />
                     </i>
@@ -81,7 +106,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: "#14a800",
+                          color: "#2491DF",
                         }}
                       />
                     </i>
@@ -104,10 +129,14 @@ function Contact() {
 
             <div className="col-lg-6">
               <form
-                action="process.php"
+                id="form"
+                action="https://formsubmit.co/coderjames7@gmail.com"
                 method="post"
+                target="hiddenFrame"
                 className="php-email-form"
+                onSubmit={handleOpen}
               >
+                <input type="hidden" name="_captcha" value="false" />
                 <div className="row gy-4">
                   <div className="col-md-6">
                     <input
@@ -115,7 +144,7 @@ function Contact() {
                       name="UName"
                       className="form-control"
                       placeholder="Your Name"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -125,7 +154,7 @@ function Contact() {
                       className="form-control"
                       name="Email"
                       placeholder="Your Email"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -135,7 +164,7 @@ function Contact() {
                       className="form-control"
                       name="Subject"
                       placeholder="Subject"
-                      required=""
+                      required
                     />
                   </div>
 
@@ -145,7 +174,7 @@ function Contact() {
                       name="msg"
                       rows="6"
                       placeholder="Message"
-                      required=""
+                      required
                     ></textarea>
                   </div>
 
@@ -156,6 +185,47 @@ function Contact() {
                   </div>
                 </div>
               </form>
+              <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                open={open}
+                onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                  timeout: 500,
+                }}
+              >
+                <Fade in={open}>
+                  <Box sx={style}>
+                    <EmailIcon
+                      sx={{
+                        color: "#2491df",
+                      }}
+                    />
+                    <Typography
+                      id="transition-modal-title"
+                      variant="p"
+                      sx={{
+                        ml: 1,
+                        fontFamily: '"Nunito", sans-serif',
+                        color: "#2491df",
+                      }}
+                    >
+                      Your message has been sent successfully. We will get back
+                      to you shortly. Cheers!
+                    </Typography>
+                  </Box>
+                </Fade>
+              </Modal>
+              <iframe
+                title="hiddenFrame"
+                name="hiddenFrame"
+                width="0"
+                height="0"
+                style={{ display: "none" }}
+                frameborder="0"
+              ></iframe>
             </div>
           </div>
         </div>
