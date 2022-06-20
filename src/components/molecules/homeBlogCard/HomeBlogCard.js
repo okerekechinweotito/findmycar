@@ -4,7 +4,13 @@ import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 
 function HomeBlogCard({ date, title, src, link }) {
   return (
-    <a href={link} className="col-lg-4" id="blogLink">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="col-lg-4"
+      id="blogLink"
+    >
       <FadeIn>
         <div className="post-box">
           <div className="post-img" style={{ height: "300px" }}>
