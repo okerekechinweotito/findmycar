@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import { FadeIn } from "../helperFunctions/FadeInAnimation";
 
 const pages = ["Stolen Cars", "Recovered Cars", "Blog", "Contact"];
@@ -86,7 +87,8 @@ const HideAppBar = (props) => {
                   }}
                 >
                   <Link
-                    href="#"
+                    component={RouterLink}
+                    to="/"
                     sx={{
                       textDecoration: "none",
                       color: "inherit",
@@ -196,7 +198,8 @@ const HideAppBar = (props) => {
                   }}
                 >
                   <Link
-                    href="#"
+                    component={RouterLink}
+                    to="/"
                     sx={{
                       textDecoration: "none",
                       color: "#2491DF",

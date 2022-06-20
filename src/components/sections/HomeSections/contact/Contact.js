@@ -25,7 +25,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: " #14a800",
+                          color: " #2491DF",
                         }}
                       />
                     </i>
@@ -44,7 +44,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: " #14a800",
+                          color: "#2491DF",
                         }}
                       />
                     </i>
@@ -63,7 +63,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: " #14a800",
+                          color: " #2491DF",
                         }}
                       />
                     </i>
@@ -81,7 +81,7 @@ function Contact() {
                         style={{
                           fontSize: "1.3em",
                           display: "inline-block",
-                          color: "#14a800",
+                          color: "#2491DF",
                         }}
                       />
                     </i>

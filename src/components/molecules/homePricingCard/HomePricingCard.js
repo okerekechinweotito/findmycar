@@ -36,10 +36,10 @@ function HomePricingCard({
             <li>
               {benefit1} &nbsp;{" "}
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             </li>

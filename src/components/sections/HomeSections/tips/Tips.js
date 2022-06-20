@@ -2,7 +2,7 @@ import React from "react";
 import "./tips.css";
 import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
-import tipsImage from "../../../../assets/Risk management-amico.svg";
+import tipsImage from "../../../../assets/tipsImage.svg";
 function Tips() {
   return (
     <section id="features" className="features">
