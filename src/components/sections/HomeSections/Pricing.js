@@ -3,6 +3,10 @@ import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 import HomePricingCard from "../../molecules/homePricingCard/HomePricingCard";
 import GppBadIcon from "@mui/icons-material/GppBad";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import basicPic from "../../../assets/pricingImage1.svg";
+import standardPic from "../../../assets/pricingImage2.svg";
+import goldPic from "../../../assets/pricingImage3.svg";
+import premiumPic from "../../../assets/pricingImage4.svg";
 
 function Pricing() {
   return (
@@ -24,9 +28,7 @@ function Pricing() {
             benefit2={"24/7 Technical Support"}
             benefit3={"Tracker Installation"}
             benefit4={"Vehicle Insurance"}
-            src={
-              "https://previews.123rf.com/images/jemastock/jemastock1711/jemastock171113569/90255474-car-gps-tracker-technology-icon-vector-illustration-graphic-design.jpg"
-            }
+            src={basicPic}
             icon={
               <GppBadIcon
                 sx={{
@@ -63,15 +65,13 @@ function Pricing() {
             benefit2={"24/7 Technical Support"}
             benefit3={"Tracker Installation"}
             benefit4={"Vehicle Insurance"}
-            src={
-              "https://cdn.w600.comps.canstockphoto.com/gps-car-tracking-eps-vector_csp59597388.jpg"
-            }
+            src={standardPic}
             icon={
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             }
@@ -102,22 +102,22 @@ function Pricing() {
             benefit2={"24/7 Technical Support"}
             benefit3={"Tracker Installation"}
             benefit4={"Vehicle Insurance"}
-            src={"https://media.istockphoto.com/vectors/-vector-id1149902500"}
+            src={goldPic}
             icon={
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             }
             icon2={
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             }
@@ -139,33 +139,31 @@ function Pricing() {
             benefit2={"24/7 Technical Support"}
             benefit3={"Tracker Installation"}
             benefit4={"Vehicle Insurance"}
-            src={
-              "https://cdn1.vectorstock.com/i/1000x1000/44/85/autonomous-car-technology-vector-22414485.jpg"
-            }
+            src={premiumPic}
             icon={
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             }
             icon2={
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             }
             icon3={
               <CheckCircleIcon
-                color="success"
                 sx={{
                   position: "absolute",
                   right: "1em",
+                  color: "#2491DF",
                 }}
               />
             }
