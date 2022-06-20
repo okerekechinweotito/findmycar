@@ -1,6 +1,5 @@
 import React from "react";
 import ValueCard from "../../molecules/homeValuesCard/HomeValueCard";
-import { Box } from "@mui/material";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 import ValueImg1 from "../../../assets/valueimg1.svg";
 import ValueImg2 from "../../../assets/valueimg2.svg";
