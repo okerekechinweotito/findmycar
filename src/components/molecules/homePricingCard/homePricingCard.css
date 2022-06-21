@@ -1,5 +1,5 @@
 .pricing-box {
-  height: 38em;
+  height: auto;
   padding: 40px 20px;
   background: #edf1f7;
   text-align: center;
@@ -93,9 +93,14 @@
   background: #2491df;
   color: #fff;
 }
-
-@media screen and (max-width: 767px) {
+/* 
+@media screen and (max-width: 1300px) {
   .pricing-box {
     height: auto;
   }
 }
+@media screen and (max-width: 767px) {
+  .pricing-box {
+    height: auto;
+  }
+} */

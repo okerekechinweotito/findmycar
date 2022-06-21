@@ -16,7 +16,7 @@ function HomePricingCard({
   icon3,
 }) {
   return (
-    <div className="col-lg-3 col-md-6 ">
+    <div className="col-xxl-3 col-lg-6 col-sm-12 col-12 ">
       <FadeIn>
         <div className="pricing-box">
           <span className="featured">Featured</span>
@@ -59,7 +59,7 @@ function HomePricingCard({
             className="btn-buy"
             style={{ textDecoration: "none" }}
           >
-            Find Out More
+            Contact Us
           </a>
         </div>
       </FadeIn>

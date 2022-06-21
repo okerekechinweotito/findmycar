@@ -16,10 +16,18 @@ import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { FadeIn } from "../helperFunctions/FadeInAnimation";
 
-const pages = ["Stolen Cars", "Recovered Cars", "Blog", "Contact"];
-
 window.onscroll = function () {
   shadowShow();
+
+  const headerVisibility =
+    document.getElementById("headerBoxShadow").style.visibility;
+  const headerPopup = document.getElementById("menu-appbar");
+
+  if (headerVisibility === "hidden") {
+    headerPopup.style.display = "none";
+  } else {
+    headerPopup.style.display = "null";
+  }
 };
 
 function shadowShow() {
@@ -51,6 +59,8 @@ const HideAppBar = (props) => {
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
+    const headerPopup = document.getElementById("menu-appbar");
+    headerPopup.style.display = "inherit";
   };
 
   const handleCloseNavMenu = () => {
@@ -157,9 +167,8 @@ const HideAppBar = (props) => {
                       },
                     }}
                   >
-                    {pages.map((page) => (
+                    <Link component={RouterLink} to="/">
                       <MenuItem
-                        key={page}
                         onClick={handleCloseNavMenu}
                         sx={{
                           transition: "0.5s",
@@ -178,10 +187,85 @@ const HideAppBar = (props) => {
                             letterSpacing: "2px",
                           }}
                         >
-                          {page}
+                          Stolen Cars
                         </Typography>
                       </MenuItem>
-                    ))}
+                    </Link>
+
+                    <Link component={RouterLink} to="/">
+                      <MenuItem
+                        onClick={handleCloseNavMenu}
+                        sx={{
+                          transition: "0.5s",
+
+                          "&:hover": {
+                            color: "#14A800",
+                            transform: "scale(0.9)",
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            textAlign: "center",
+                            fontSize: "1.2em",
+                            fontFamily: "'Nunito', sans-serif",
+                            letterSpacing: "2px",
+                          }}
+                        >
+                          Recovered Cars
+                        </Typography>
+                      </MenuItem>
+                    </Link>
+
+                    <Link href="#recent-blog-posts">
+                      <MenuItem
+                        onClick={handleCloseNavMenu}
+                        sx={{
+                          transition: "0.5s",
+
+                          "&:hover": {
+                            color: "#14A800",
+                            transform: "scale(0.9)",
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            textAlign: "center",
+                            fontSize: "1.2em",
+                            fontFamily: "'Nunito', sans-serif",
+                            letterSpacing: "2px",
+                          }}
+                        >
+                          Blog
+                        </Typography>
+                      </MenuItem>
+                    </Link>
+
+                    <Link href="#contact">
+                      <MenuItem
+                        onClick={handleCloseNavMenu}
+                        sx={{
+                          transition: "0.5s",
+
+                          "&:hover": {
+                            color: "#14A800",
+                            transform: "scale(0.9)",
+                          },
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            textAlign: "center",
+                            fontSize: "1.2em",
+                            fontFamily: "'Nunito', sans-serif",
+                            letterSpacing: "2px",
+                          }}
+                        >
+                          Contact
+                        </Typography>
+                      </MenuItem>
+                    </Link>
                   </Menu>
                 </Box>
                 <Typography
@@ -225,9 +309,8 @@ const HideAppBar = (props) => {
                     alignItems: "center",
                   }}
                 >
-                  {pages.map((page) => (
+                  <Link component={RouterLink} to="/">
                     <Button
-                      key={page}
                       onClick={handleCloseNavMenu}
                       sx={{
                         pt: 1,
@@ -246,9 +329,81 @@ const HideAppBar = (props) => {
                         },
                       }}
                     >
-                      {page}
+                      Stolen Cars
                     </Button>
-                  ))}
+                  </Link>
+
+                  <Link component={RouterLink} to="/">
+                    <Button
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        pt: 1,
+                        color: "#2491DF",
+                        display: "block",
+                        fontWeight: "boldest",
+                        fontFamily: "'Nunito', sans-serif",
+                        letterSpacing: "2px",
+                        background: " #edf1f7",
+                        fontSize: { md: "0.9em", lg: "1.0em" },
+                        marginLeft: "3em",
+                        transition: "0.5s",
+                        "&:hover": {
+                          color: "#14A800",
+                          transform: "scale(0.9)",
+                        },
+                      }}
+                    >
+                      Recovered Cars
+                    </Button>
+                  </Link>
+
+                  <Link href="#recent-blog-posts">
+                    <Button
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        pt: 1,
+                        color: "#2491DF",
+                        display: "block",
+                        fontWeight: "boldest",
+                        fontFamily: "'Nunito', sans-serif",
+                        letterSpacing: "2px",
+                        background: " #edf1f7",
+                        fontSize: { md: "0.9em", lg: "1.0em" },
+                        marginLeft: "3em",
+                        transition: "0.5s",
+                        "&:hover": {
+                          color: "#14A800",
+                          transform: "scale(0.9)",
+                        },
+                      }}
+                    >
+                      Blog
+                    </Button>
+                  </Link>
+
+                  <Link href="#contact">
+                    <Button
+                      onClick={handleCloseNavMenu}
+                      sx={{
+                        pt: 1,
+                        color: "#2491DF",
+                        display: "block",
+                        fontWeight: "boldest",
+                        fontFamily: "'Nunito', sans-serif",
+                        letterSpacing: "2px",
+                        background: " #edf1f7",
+                        fontSize: { md: "0.9em", lg: "1.0em" },
+                        marginLeft: "3em",
+                        transition: "0.5s",
+                        "&:hover": {
+                          color: "#14A800",
+                          transform: "scale(0.9)",
+                        },
+                      }}
+                    >
+                      Contact
+                    </Button>
+                  </Link>
                 </Box>
               </Toolbar>
             </FadeIn>
