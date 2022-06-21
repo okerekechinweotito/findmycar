@@ -16,7 +16,7 @@ const style = {
   width: 400,
   bgcolor: "background.paper",
   borderRadius: 2,
-  boxShadow: 24,
+  boxShadow: 23,
   p: 4,
   display: "flex",
   alignItems: "center",
