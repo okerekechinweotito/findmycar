@@ -3,6 +3,7 @@ import "./Hero.css";
 import HeroImage from "../../../../assets/heroImg.svg";
 import HomeButton from "../../../atoms/HomeButton";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import HomeFormModal from "../../../molecules/homeFormModal/HomeFormModal";
 
 function HomeHero() {
   return (
@@ -23,14 +24,7 @@ function HomeHero() {
                 </h2>
                 <div>
                   <div className="text-center text-lg-start">
-                    <HomeButton
-                      text={"Recover"}
-                      style={{
-                        padding: "1em 5em",
-                        margin: "2em 0",
-                        letterSpacing: "5px",
-                      }}
-                    />
+                    <HomeFormModal />
                   </div>
                 </div>
               </div>
