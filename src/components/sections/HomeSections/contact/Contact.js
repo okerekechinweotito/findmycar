@@ -6,7 +6,7 @@ import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
 import EmailIcon from "@mui/icons-material/Email";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
-import { Typography, Box, Modal, Fade, Backdrop } from "@mui/material";
+import { Typography, Box, Modal, Fade, Backdrop, Button } from "@mui/material";
 
 const style = {
   position: "absolute",
@@ -19,12 +19,16 @@ const style = {
   boxShadow: 23,
   p: 4,
   display: "flex",
-  alignItems: "center",
 };
 
 function Contact() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => {
+    const timeout = setTimeout(() => {
+      setOpen(true);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  };
   const handleClose = () => setOpen(false);
 
   function resetForm() {
@@ -130,7 +134,7 @@ function Contact() {
             <div className="col-lg-6">
               <form
                 id="form"
-                action="https://formsubmit.co/coderjames7@gmail.com"
+                action="https://formsubmit.co/jamessokoto007@gmail.com"
                 method="post"
                 target="hiddenFrame"
                 className="php-email-form"
@@ -198,23 +202,53 @@ function Contact() {
               >
                 <Fade in={open}>
                   <Box sx={style}>
-                    <EmailIcon
+                    <Box onClick={handleClose}>
+                      <Button
+                        onClick={resetForm}
+                        sx={{
+                          position: "relative",
+                          left: "-40%",
+                          top: "2em",
+                          backgroundColor: "rgb(170, 55, 55) !important",
+                          border: "0",
+                          padding: "0.5em 1em",
+                          margin: "10px",
+                          color: "#fff ",
+                          transition: "0.4s",
+                          borderRadius: "0 0 10px 0",
+                          fontWeight: "bold",
+                          textAlign: "center",
+                        }}
+                        id="form-close-button"
+                      >
+                        close
+                      </Button>
+                    </Box>
+                    <Box
                       sx={{
-                        color: "#2491df",
-                      }}
-                    />
-                    <Typography
-                      id="transition-modal-title"
-                      variant="p"
-                      sx={{
-                        ml: 1,
-                        fontFamily: '"Nunito", sans-serif',
-                        color: "#2491df",
+                        position: "relative",
+                        right: "10%",
+                        mt: 2,
                       }}
                     >
-                      Your message has been sent successfully. We will get back
-                      to you shortly. Cheers!
-                    </Typography>
+                      <EmailIcon
+                        sx={{
+                          color: "#2491df",
+                        }}
+                      />
+                      <Typography
+                        id="transition-modal-title"
+                        variant="p"
+                        sx={{
+                          ml: 1,
+                          fontFamily: '"Nunito", sans-serif',
+                          color: "#2491df",
+                        }}
+                      >
+                        Your Message has been sent, we would get back to you
+                        shortly
+                      </Typography>
+                    </Box>
                   </Box>
                 </Fade>
               </Modal>
@@ -224,7 +258,7 @@ function Contact() {
                 width="0"
                 height="0"
                 style={{ display: "none" }}
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </div>
           </div>

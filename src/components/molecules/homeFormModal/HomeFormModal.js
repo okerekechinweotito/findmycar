@@ -2,12 +2,38 @@ import * as React from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Fade from "@mui/material/Fade";
 import HomeButton from "../../atoms/HomeButton";
 import "./homeFormModal.css";
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  borderRadius: 2,
+  boxShadow: 23,
+  p: 4,
+  display: "flex",
+};
+
 function HomeFormModal() {
   const [open, setOpen] = React.useState(false);
+
+  const [show, setShow] = React.useState(false);
+  const handleShow = () => {
+    const timeout = setTimeout(() => {
+      setShow(true);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  };
+  const handleHidden = () => {
+    setShow(false);
+  };
 
   function disableScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -29,6 +55,10 @@ function HomeFormModal() {
     setOpen(false);
     enableScroll();
   };
+
+  function resetForm() {
+    document.getElementById("form").reset();
+  }
   return (
     <Box>
       <HomeButton
@@ -58,7 +88,14 @@ function HomeFormModal() {
             <div className="col-md-12 text-center" onClick={handleClose}>
               <button id="form-close-button">close</button>
             </div>
-            <form className="php-email-form">
+            <form
+              id="form"
+              action="https://formsubmit.co/jamessokoto007@gmail.com"
+              method="post"
+              target="hiddenFrame"
+              className="php-email-form"
+              onSubmit={handleShow}
+            >
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
@@ -136,6 +173,64 @@ function HomeFormModal() {
           </div>
         </Fade>
       </Modal>
+      <Modal
+        hideBackdrop
+        open={show}
+        onClose={handleHidden}
+        aria-labelledby="child-modal-title"
+        aria-describedby="child-modal-description"
+      >
+        <Box sx={style}>
+          <Box onClick={handleHidden}>
+            <Button
+              onClick={resetForm}
+              sx={{
+                position: "relative",
+                left: "-47%",
+                top: "-2.8em",
+                backgroundColor: "rgb(170, 55, 55) !important",
+                border: "0",
+                padding: "0.5em 1em",
+                margin: "10px",
+                color: "#fff ",
+                borderRadius: "0 0 10px 0",
+                textAlign: "center",
+                textTransform: "lowercase",
+                fontWeight: "bold",
+              }}
+            >
+              close
+            </Button>
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              right: "10%",
+              mt: 2,
+            }}
+          >
+            <Typography
+              id="transition-modal-title"
+              variant="p"
+              sx={{
+                fontFamily: '"Nunito", sans-serif',
+                color: "#2491df",
+              }}
+            >
+              Your details would be forwarded to the relevant security agencies
+              , we would get back to you shortly
+            </Typography>
+          </Box>
+        </Box>
+      </Modal>
+      <iframe
+        title="hiddenFrame"
+        name="hiddenFrame"
+        width="0"
+        height="0"
+        style={{ display: "none" }}
+        frameBorder="0"
+      ></iframe>
     </Box>
   );
 }
