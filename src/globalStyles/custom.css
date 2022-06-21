@@ -74,7 +74,26 @@ input,
 textarea {
   color: #2491df !important;
   letter-spacing: 2px !important;
+  background-color: #edf1f7 !important	;
 }
+
+label {
+  color: #7f878e !important;
+  letter-spacing: 2px !important;
+  margin: 0 0 0.5em 0;
+}
+
+/* Material UI Built-in Classes */
+
+.MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.MuiButton-endIcon .MuiSvgIcon-root {
+  font-size: 2em !important;
+  position: relative;
+  bottom: -1px;
+}
+
 /* Classes and ID Specific */
 
 #headerBoxShadow.active {
@@ -101,6 +120,7 @@ textarea {
   font-weight: 700;
   color: rgb(36, 145, 223);
 }
+
 @media (max-width: 768px) {
   .section-header p {
     font-size: 28px;
