@@ -4,7 +4,7 @@ import Nav from "./components/sections/Header.js";
 import Home from "./pages/Home";
 import Footer from "./components/sections/footer/Footer";
 import BackToTopButton from "./components/molecules/backToTopButton/BackToTopButton.js";
-import Report from "./pages/Report.jsx";
+import StolenCars from "./pages/StolenCars.jsx";
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/report" element={<Report />} />
+          <Route path="/stolen-cars" element={<StolenCars />} />
         </Routes>
         <BackToTopButton />
         <Footer />
