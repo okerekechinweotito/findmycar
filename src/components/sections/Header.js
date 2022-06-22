@@ -15,6 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { FadeIn } from "../helperFunctions/FadeInAnimation";
+import { HashLink } from "react-router-hash-link";
 
 window.onscroll = function () {
   shadowShow();
@@ -167,7 +168,7 @@ const HideAppBar = (props) => {
                       },
                     }}
                   >
-                    <Link component={RouterLink} to="/">
+                    <Link component={RouterLink} to="/stolen-cars">
                       <MenuItem
                         onClick={handleCloseNavMenu}
                         sx={{
@@ -217,7 +218,7 @@ const HideAppBar = (props) => {
                       </MenuItem>
                     </Link>
 
-                    <Link href="#recent-blog-posts">
+                    <HashLink smooth to="/#recent-blog-posts">
                       <MenuItem
                         onClick={handleCloseNavMenu}
                         sx={{
@@ -240,9 +241,9 @@ const HideAppBar = (props) => {
                           Blog
                         </Typography>
                       </MenuItem>
-                    </Link>
+                    </HashLink>
 
-                    <Link href="#contact">
+                    <HashLink smooth to="/#contact">
                       <MenuItem
                         onClick={handleCloseNavMenu}
                         sx={{
@@ -265,7 +266,7 @@ const HideAppBar = (props) => {
                           Contact
                         </Typography>
                       </MenuItem>
-                    </Link>
+                    </HashLink>
                   </Menu>
                 </Box>
                 <Typography
@@ -309,7 +310,7 @@ const HideAppBar = (props) => {
                     alignItems: "center",
                   }}
                 >
-                  <Link component={RouterLink} to="/">
+                  <Link component={RouterLink} to="/stolen-cars">
                     <Button
                       onClick={handleCloseNavMenu}
                       sx={{
@@ -357,7 +358,7 @@ const HideAppBar = (props) => {
                     </Button>
                   </Link>
 
-                  <Link href="#recent-blog-posts">
+                  <HashLink smooth to="/#recent-blog-posts">
                     <Button
                       onClick={handleCloseNavMenu}
                       sx={{
@@ -379,9 +380,9 @@ const HideAppBar = (props) => {
                     >
                       Blog
                     </Button>
-                  </Link>
+                  </HashLink>
 
-                  <Link href="#contact">
+                  <HashLink smooth to="/#contact">
                     <Button
                       onClick={handleCloseNavMenu}
                       sx={{
@@ -403,7 +404,7 @@ const HideAppBar = (props) => {
                     >
                       Contact
                     </Button>
-                  </Link>
+                  </HashLink>
                 </Box>
               </Toolbar>
             </FadeIn>
