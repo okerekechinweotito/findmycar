@@ -89,7 +89,7 @@ function HomeFormModal() {
                 type="hidden"
                 name="_cc"
                 value="findmycar.nigeria@gmail.com"
-              ></input>
+              />
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
