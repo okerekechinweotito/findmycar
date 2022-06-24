@@ -138,7 +138,7 @@ function Contact() {
             <div className="col-lg-6">
               <form
                 id="form"
-                action="https://formsubmit.co/jamessokoto007@gmail.com"
+                action="https://formsubmit.co/findmycar.nigeria@gmail.com"
                 method="post"
                 target="hiddenFrame"
                 className="php-email-form"
@@ -149,7 +149,7 @@ function Contact() {
                   <div className="col-md-6">
                     <input
                       type="text"
-                      name="UName"
+                      name="Name"
                       className="form-control"
                       placeholder="Your Name"
                       required
@@ -160,7 +160,7 @@ function Contact() {
                     <input
                       type="Email"
                       className="form-control"
-                      name="Email"
+                      name="Email Address"
                       placeholder="Your Email"
                       required
                     />
@@ -179,7 +179,7 @@ function Contact() {
                   <div className="col-md-12">
                     <textarea
                       className="form-control"
-                      name="msg"
+                      name="Message"
                       rows="6"
                       placeholder="Message"
                       required
