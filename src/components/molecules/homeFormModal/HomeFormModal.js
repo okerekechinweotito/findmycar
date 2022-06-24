@@ -79,7 +79,7 @@ function HomeFormModal() {
             </div>
             <form
               id="form"
-              action="https://formsubmit.co/jamessokoto007@gmail.com"
+              action="https://formsubmit.co/eendpoverty@gmail.com"
               method="post"
               target="hiddenFrame"
               className="php-email-form"
