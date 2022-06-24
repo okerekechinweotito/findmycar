@@ -8,19 +8,6 @@ import Fade from "@mui/material/Fade";
 import HomeButton from "../../atoms/HomeButton";
 import "./homeFormModal.css";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  borderRadius: 2,
-  boxShadow: 23,
-  p: 4,
-  display: "flex",
-};
-
 function HomeFormModal() {
   const [open, setOpen] = React.useState(false);
 
@@ -180,23 +167,41 @@ function HomeFormModal() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={style}>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            bgcolor: "background.paper",
+            borderBottomLeftRadius: "10px",
+            borderBottomRightRadius: "10px",
+            boxShadow: 23,
+            p: 4,
+            display: "flex",
+          }}
+        >
           <Box onClick={handleHidden}>
             <Button
               onClick={resetForm}
               sx={{
                 position: "relative",
-                left: "-47%",
-                top: "-2.8em",
-                backgroundColor: "rgb(170, 55, 55) !important",
+                left: "-43%",
+                top: "-3em",
+                backgroundColor: "rgb(170, 55, 55)",
                 border: "0",
                 padding: "0.5em 1em",
                 margin: "10px",
                 color: "#fff ",
+                transition: "0.4s",
                 borderRadius: "0 0 10px 0",
-                textAlign: "center",
-                textTransform: "lowercase",
                 fontWeight: "bold",
+                textAlign: "center",
+
+                "&:hover": {
+                  backgroundColor: "rgb(170, 55, 60)",
+                },
               }}
             >
               close

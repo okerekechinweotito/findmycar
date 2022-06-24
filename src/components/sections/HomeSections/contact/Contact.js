@@ -8,19 +8,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
 import { Typography, Box, Modal, Fade, Backdrop, Button } from "@mui/material";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  borderRadius: 2,
-  boxShadow: 23,
-  p: 4,
-  display: "flex",
-};
-
 function Contact() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -201,15 +188,29 @@ function Contact() {
                 }}
               >
                 <Fade in={open}>
-                  <Box sx={style}>
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      width: 400,
+                      bgcolor: "background.paper",
+                      borderBottomLeftRadius: "10px",
+                      borderBottomRightRadius: "10px",
+                      boxShadow: 23,
+                      p: 4,
+                      display: "flex",
+                    }}
+                  >
                     <Box onClick={handleClose}>
                       <Button
                         onClick={resetForm}
                         sx={{
                           position: "relative",
-                          left: "-40%",
-                          top: "2em",
-                          backgroundColor: "rgb(170, 55, 55) !important",
+                          left: "-43%",
+                          top: "-3em",
+                          backgroundColor: "rgb(170, 55, 55)",
                           border: "0",
                           padding: "0.5em 1em",
                           margin: "10px",
@@ -218,8 +219,11 @@ function Contact() {
                           borderRadius: "0 0 10px 0",
                           fontWeight: "bold",
                           textAlign: "center",
+
+                          "&:hover": {
+                            backgroundColor: "rgb(170, 55, 60)",
+                          },
                         }}
-                        id="form-close-button"
                       >
                         close
                       </Button>
