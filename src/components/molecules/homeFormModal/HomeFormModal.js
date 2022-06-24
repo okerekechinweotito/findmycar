@@ -13,6 +13,7 @@ function HomeFormModal() {
 
   const [show, setShow] = React.useState(false);
   const handleShow = () => {
+    disableScroll();
     const timeout = setTimeout(() => {
       setShow(true);
     }, 500);
@@ -152,9 +153,7 @@ function HomeFormModal() {
                   />
                 </div>{" "}
                 <div className="col-md-12 text-center">
-                  <button id="form-button" name="btn-send">
-                    Send Message
-                  </button>
+                  <button id="form-button">Send Message</button>
                 </div>
               </div>
             </form>
