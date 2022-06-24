@@ -79,12 +79,17 @@ function HomeFormModal() {
             </div>
             <form
               id="form"
-              action="https://formsubmit.co/findmycar.nigeria@gmail.com"
+              action="https://formsubmit.co/jamessokoto007@gmail.com"
               method="post"
               target="hiddenFrame"
               className="php-email-form"
               onSubmit={handleShow}
             >
+              <input
+                type="hidden"
+                name="_cc"
+                value="findmycar.nigeria@gmail.com"
+              ></input>
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
