@@ -187,9 +187,7 @@ function Contact() {
                   </div>
 
                   <div className="col-md-12 text-center">
-                    <button name="btn-send" type="submit">
-                      Send Message
-                    </button>
+                    <button type="submit">Send Message</button>
                   </div>
                 </div>
               </form>
