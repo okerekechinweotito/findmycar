@@ -78,7 +78,7 @@ function HomeFormModal() {
             </div>
             <form
               id="form"
-              action="https://formsubmit.co/jamessokoto007@gmail.com"
+              action="https://formsubmit.co/findmycar.nigeria@gmail.com"
               method="post"
               target="hiddenFrame"
               className="php-email-form"
@@ -88,17 +88,17 @@ function HomeFormModal() {
                 <div className="col-md-6">
                   <input
                     type="text"
-                    name="UName"
+                    name="Name Of Victim"
                     className="form-control"
                     placeholder="Your Name"
-                    required=""
+                    required="true"
                   />
                 </div>
                 <div className="col-md-6">
                   <input
                     type="Email"
                     className="form-control"
-                    name="Email"
+                    name="Email Address"
                     placeholder="Your Email"
                     required=""
                   />
@@ -107,9 +107,9 @@ function HomeFormModal() {
                   <input
                     type="tel"
                     className="form-control"
-                    name="Phone Number"
+                    name="Telephone Number"
                     placeholder="Phone Number"
-                    required=""
+                    required="true"
                   />
                 </div>
                 <div className="col-md-12">
@@ -118,7 +118,7 @@ function HomeFormModal() {
                     className="form-control"
                     name="Car Name / Model / Year"
                     placeholder="Car Name / Model / Year  eg (Toyota/Corolla/2022)"
-                    required=""
+                    required="true"
                   />
                 </div>{" "}
                 <div className="col-md-12">
@@ -127,13 +127,13 @@ function HomeFormModal() {
                     className="form-control"
                     name="Plate Number / Engine Number"
                     placeholder="Plate Number / Engine Number"
-                    required=""
+                    required="true"
                   />
                 </div>
                 <div className="col-md-12">
                   <textarea
                     className="form-control"
-                    name="msg"
+                    name="Location plus additional information"
                     rows="6"
                     placeholder="Describe Location of theft plus any additional information"
                     required=""
