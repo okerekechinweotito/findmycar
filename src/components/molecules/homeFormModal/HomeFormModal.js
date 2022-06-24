@@ -2,12 +2,26 @@ import * as React from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import Fade from "@mui/material/Fade";
 import HomeButton from "../../atoms/HomeButton";
 import "./homeFormModal.css";
 
 function HomeFormModal() {
   const [open, setOpen] = React.useState(false);
+
+  const [show, setShow] = React.useState(false);
+  const handleShow = () => {
+    const timeout = setTimeout(() => {
+      setShow(true);
+    }, 500);
+    return () => clearTimeout(timeout);
+  };
+  const handleHidden = () => {
+    setShow(false);
+    handleClose();
+  };
 
   function disableScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -29,6 +43,10 @@ function HomeFormModal() {
     setOpen(false);
     enableScroll();
   };
+
+  function resetForm() {
+    document.getElementById("form").reset();
+  }
   return (
     <Box>
       <HomeButton
@@ -58,7 +76,14 @@ function HomeFormModal() {
             <div className="col-md-12 text-center" onClick={handleClose}>
               <button id="form-close-button">close</button>
             </div>
-            <form className="php-email-form">
+            <form
+              id="form"
+              action="https://formsubmit.co/jamessokoto007@gmail.com"
+              method="post"
+              target="hiddenFrame"
+              className="php-email-form"
+              onSubmit={handleShow}
+            >
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
@@ -136,6 +161,82 @@ function HomeFormModal() {
           </div>
         </Fade>
       </Modal>
+      <Modal
+        open={show}
+        onClose={handleHidden}
+        aria-labelledby="child-modal-title"
+        aria-describedby="child-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: { xs: "20em", md: "25em" },
+            backgroundColor: "#edf1f7",
+            borderBottomLeftRadius: "10px",
+            borderBottomRightRadius: "10px",
+            boxShadow: 23,
+            p: 4,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Box onClick={handleHidden}>
+            <Button
+              onClick={resetForm}
+              sx={{
+                position: "relative",
+                left: { xs: "-2.3em", md: "-2.3em" },
+                top: { xs: "-2.3em", md: "-2.3em" },
+                backgroundColor: "rgb(170, 55, 55)",
+                border: "0",
+                padding: "0.5em 1em",
+                margin: "0",
+                color: "#fff ",
+                transition: "0.4s",
+                borderRadius: "0 0 10px 0",
+                fontWeight: "bold",
+                textAlign: "center",
+                textTransform: "lowercase",
+
+                "&:hover": {
+                  backgroundColor: "red",
+                },
+              }}
+            >
+              close
+            </Button>
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              marginBottom: "1em",
+            }}
+          >
+            <Typography
+              id="transition-modal-title"
+              variant="p"
+              sx={{
+                fontFamily: '"Nunito", sans-serif',
+                color: "#2491df",
+              }}
+            >
+              Your details have been forwarded to the relevant security
+              agencies. We would get back to you shortly
+            </Typography>
+          </Box>
+        </Box>
+      </Modal>
+      <iframe
+        title="hiddenFrame"
+        name="hiddenFrame"
+        width="0"
+        height="0"
+        style={{ display: "none" }}
+        frameBorder="0"
+      ></iframe>
     </Box>
   );
 }
