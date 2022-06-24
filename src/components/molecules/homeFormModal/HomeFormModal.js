@@ -15,11 +15,12 @@ function HomeFormModal() {
   const handleShow = () => {
     const timeout = setTimeout(() => {
       setShow(true);
-    }, 3000);
+    }, 500);
     return () => clearTimeout(timeout);
   };
   const handleHidden = () => {
     setShow(false);
+    handleClose();
   };
 
   function disableScroll() {
@@ -161,7 +162,6 @@ function HomeFormModal() {
         </Fade>
       </Modal>
       <Modal
-        hideBackdrop
         open={show}
         onClose={handleHidden}
         aria-labelledby="child-modal-title"
@@ -173,13 +173,14 @@ function HomeFormModal() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: 400,
-            bgcolor: "background.paper",
+            width: { xs: "20em", md: "25em" },
+            backgroundColor: "#edf1f7",
             borderBottomLeftRadius: "10px",
             borderBottomRightRadius: "10px",
             boxShadow: 23,
             p: 4,
             display: "flex",
+            flexDirection: "column",
           }}
         >
           <Box onClick={handleHidden}>
@@ -187,20 +188,21 @@ function HomeFormModal() {
               onClick={resetForm}
               sx={{
                 position: "relative",
-                left: "-43%",
-                top: "-3em",
+                left: { xs: "-2.3em", md: "-2.3em" },
+                top: { xs: "-2.3em", md: "-2.3em" },
                 backgroundColor: "rgb(170, 55, 55)",
                 border: "0",
                 padding: "0.5em 1em",
-                margin: "10px",
+                margin: "0",
                 color: "#fff ",
                 transition: "0.4s",
                 borderRadius: "0 0 10px 0",
                 fontWeight: "bold",
                 textAlign: "center",
+                textTransform: "lowercase",
 
                 "&:hover": {
-                  backgroundColor: "rgb(170, 55, 60)",
+                  backgroundColor: "red",
                 },
               }}
             >
@@ -210,8 +212,7 @@ function HomeFormModal() {
           <Box
             sx={{
               position: "relative",
-              right: "10%",
-              mt: 2,
+              marginBottom: "1em",
             }}
           >
             <Typography
@@ -222,8 +223,8 @@ function HomeFormModal() {
                 color: "#2491df",
               }}
             >
-              Your details would be forwarded to the relevant security agencies
-              , we would get back to you shortly
+              Your details have been forwarded to the relevant security
+              agencies. We would get back to you shortly
             </Typography>
           </Box>
         </Box>

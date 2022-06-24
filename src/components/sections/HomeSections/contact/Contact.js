@@ -10,13 +10,30 @@ import { Typography, Box, Modal, Fade, Backdrop, Button } from "@mui/material";
 
 function Contact() {
   const [open, setOpen] = React.useState(false);
+
+  function disableScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollLeft =
+      window.pageXOffset || document.documentElement.scrollLeft;
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+
+  function enableScroll() {
+    window.onscroll = function () {};
+  }
   const handleOpen = () => {
+    disableScroll();
     const timeout = setTimeout(() => {
       setOpen(true);
-    }, 3000);
+    }, 500);
     return () => clearTimeout(timeout);
   };
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    enableScroll();
+    setOpen(false);
+  };
 
   function resetForm() {
     document.getElementById("form").reset();
@@ -177,84 +194,72 @@ function Contact() {
                 </div>
               </form>
               <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
                 open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                  timeout: 500,
-                }}
+                onClose={handleOpen}
+                aria-labelledby="child-modal-title"
+                aria-describedby="child-modal-description"
               >
-                <Fade in={open}>
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      width: 400,
-                      bgcolor: "background.paper",
-                      borderBottomLeftRadius: "10px",
-                      borderBottomRightRadius: "10px",
-                      boxShadow: 23,
-                      p: 4,
-                      display: "flex",
-                    }}
-                  >
-                    <Box onClick={handleClose}>
-                      <Button
-                        onClick={resetForm}
-                        sx={{
-                          position: "relative",
-                          left: "-43%",
-                          top: "-3em",
-                          backgroundColor: "rgb(170, 55, 55)",
-                          border: "0",
-                          padding: "0.5em 1em",
-                          margin: "10px",
-                          color: "#fff ",
-                          transition: "0.4s",
-                          borderRadius: "0 0 10px 0",
-                          fontWeight: "bold",
-                          textAlign: "center",
-
-                          "&:hover": {
-                            backgroundColor: "rgb(170, 55, 60)",
-                          },
-                        }}
-                      >
-                        close
-                      </Button>
-                    </Box>
-                    <Box
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    width: { xs: "20em", md: "25em" },
+                    backgroundColor: "#edf1f7",
+                    borderBottomLeftRadius: "10px",
+                    borderBottomRightRadius: "10px",
+                    boxShadow: 23,
+                    p: 4,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Box onClick={handleClose}>
+                    <Button
+                      onClick={resetForm}
                       sx={{
                         position: "relative",
-                        right: "10%",
-                        mt: 2,
+                        left: { xs: "-2.3em", md: "-2.3em" },
+                        top: { xs: "-2.3em", md: "-2.3em" },
+                        backgroundColor: "rgb(170, 55, 55)",
+                        border: "0",
+                        padding: "0.5em 1em",
+                        margin: "0",
+                        color: "#fff ",
+                        transition: "0.4s",
+                        borderRadius: "0 0 10px 0",
+                        fontWeight: "bold",
+                        textAlign: "center",
+                        textTransform: "lowercase",
+
+                        "&:hover": {
+                          backgroundColor: "red",
+                        },
                       }}
                     >
-                      <EmailIcon
-                        sx={{
-                          color: "#2491df",
-                        }}
-                      />
-                      <Typography
-                        id="transition-modal-title"
-                        variant="p"
-                        sx={{
-                          ml: 1,
-                          fontFamily: '"Nunito", sans-serif',
-                          color: "#2491df",
-                        }}
-                      >
-                        Your Message has been sent, we would get back to you
-                        shortly
-                      </Typography>
-                    </Box>
+                      close
+                    </Button>
                   </Box>
-                </Fade>
+                  <Box
+                    sx={{
+                      position: "relative",
+                      marginBottom: "1em",
+                    }}
+                  >
+                    <Typography
+                      id="transition-modal-title"
+                      variant="p"
+                      sx={{
+                        fontFamily: '"Nunito", sans-serif',
+                        color: "#2491df",
+                      }}
+                    >
+                      Your Message has been forwarded to FindMyCar Team. We
+                      would get back to you shortly
+                    </Typography>
+                  </Box>
+                </Box>
               </Modal>
               <iframe
                 title="hiddenFrame"
