@@ -79,7 +79,7 @@ function HomeFormModal() {
             </div>
             <form
               id="contactform"
-              action="https://formsubmit.io/send/findmycar.nigeria@gmail"
+              action="https://formsubmit.io/send/findmycar.nigeria@gmail.com"
               method="POST"
               className="php-email-form"
               onSubmit={handleShow}
