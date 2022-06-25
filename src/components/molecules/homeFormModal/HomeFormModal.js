@@ -12,7 +12,8 @@ function HomeFormModal() {
   const [open, setOpen] = React.useState(false);
 
   const [show, setShow] = React.useState(false);
-  const handleShow = () => {
+  const handleShow = (e) => {
+    e.preventDefault();
     disableScroll();
     const timeout = setTimeout(() => {
       setShow(true);
@@ -46,7 +47,7 @@ function HomeFormModal() {
   };
 
   function resetForm() {
-    document.getElementById("contactform").reset();
+    document.getElementById("form").reset();
   }
   return (
     <Box>
@@ -78,11 +79,12 @@ function HomeFormModal() {
               <button id="form-close-button">close</button>
             </div>
             <form
-              id="contactform"
-              action="https://formsubmit.io/send/findmycar.nigeria@gmail.com"
+              id="form"
+              action="https://formsubmit.co/findmycar.nigeria@gmail.com"
               method="POST"
               className="php-email-form"
               onSubmit={handleShow}
+              enctype="multipart/form-data"
             >
               <input
                 type="hidden"
