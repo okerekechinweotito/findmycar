@@ -46,7 +46,7 @@ function HomeFormModal() {
   };
 
   function resetForm() {
-    document.getElementById("form").reset();
+    document.getElementById("contactform").reset();
   }
   return (
     <Box>
@@ -78,10 +78,9 @@ function HomeFormModal() {
               <button id="form-close-button">close</button>
             </div>
             <form
-              id="form"
-              action="https://formsubmit.co/eendpoverty@gmail.com"
-              method="post"
-              target="hiddenFrame"
+              id="contactform"
+              action="https://formsubmit.io/send/findmycar.nigeria@gmail"
+              method="POST"
               className="php-email-form"
               onSubmit={handleShow}
             >
