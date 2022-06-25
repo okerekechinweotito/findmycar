@@ -82,6 +82,7 @@ function HomeFormModal() {
               id="form"
               action="https://formsubmit.co/findmycar.nigeria@gmail.com"
               method="POST"
+              target="hiddenFrame"
               className="php-email-form"
               onSubmit={handleShow}
               enctype="multipart/form-data"
