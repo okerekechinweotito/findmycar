@@ -82,15 +82,13 @@ function HomeFormModal() {
               id="form"
               action="https://formsubmit.co/findmycar.nigeria@gmail.com"
               method="POST"
+              target="hiddenFrame"
               className="php-email-form"
               onSubmit={handleShow}
               enctype="multipart/form-data"
             >
-              <input
-                type="hidden"
-                name="_cc"
-                value="findmycar.nigeria@gmail.com"
-              />
+              <input type="hidden" name="_captcha" value="false" />
+
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
