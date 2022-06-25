@@ -13,7 +13,6 @@ function HomeFormModal() {
 
   const [show, setShow] = React.useState(false);
   const handleShow = (e) => {
-    e.preventDefault();
     disableScroll();
     const timeout = setTimeout(() => {
       setShow(true);
@@ -85,7 +84,6 @@ function HomeFormModal() {
               target="hiddenFrame"
               className="php-email-form"
               onSubmit={handleShow}
-              enctype="multipart/form-data"
             >
               <input type="hidden" name="_captcha" value="false" />
 
