@@ -87,11 +87,8 @@ function HomeFormModal() {
               onSubmit={handleShow}
               enctype="multipart/form-data"
             >
-              <input
-                type="hidden"
-                name="_cc"
-                value="findmycar.nigeria@gmail.com"
-              />
+              <input type="hidden" name="_captcha" value="false" />
+
               <div className="row gy-4">
                 <div className="col-md-6">
                   <input
