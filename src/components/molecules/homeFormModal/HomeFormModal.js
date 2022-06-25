@@ -12,7 +12,7 @@ function HomeFormModal() {
   const [open, setOpen] = React.useState(false);
 
   const [show, setShow] = React.useState(false);
-  const handleShow = (e) => {
+  const handleShow = () => {
     disableScroll();
     const timeout = setTimeout(() => {
       setShow(true);
