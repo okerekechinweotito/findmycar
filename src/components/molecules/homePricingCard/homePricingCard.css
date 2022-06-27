@@ -15,13 +15,6 @@
   -o-transition: 0.5s;
   margin: 2em 1em 1em 1em;
 }
-.pricing-box:hover {
-  transform: scale(0.9);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-}
 .pricing-box h3 {
   font-weight: 700;
   font-size: 18px;

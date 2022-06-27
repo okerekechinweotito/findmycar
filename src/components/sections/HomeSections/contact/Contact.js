@@ -138,9 +138,9 @@ function Contact() {
             <div className="col-lg-6">
               <form
                 id="form"
-                action="https://formsubmit.co/findmycar.nigeria@gmail.com"
-                method="post"
-                target="hiddenFrame"
+                //action="https://formsubmit.co/findmycar.nigeria@gmail.com"
+                // method="post"
+                //  target="hiddenFrame"
                 className="php-email-form"
                 onSubmit={handleOpen}
               >
