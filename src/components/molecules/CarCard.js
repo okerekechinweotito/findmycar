@@ -25,7 +25,7 @@ function CarCard({
     <FadeIn>
       <Box
         sx={{
-          width: { xs: "27em", md: "25em" },
+          width: { xs: "25em", md: "25em" },
           backgroundColor: "#EDF1F7",
           borderRadius: "1em",
           border: "1px solid #fff",
@@ -210,7 +210,7 @@ function CarCard({
         </Box>
         <hr
           style={{
-            width: "23em",
+            width: "20em",
             margin: " 1em auto",
           }}
         />
