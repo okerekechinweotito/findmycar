@@ -193,31 +193,6 @@ const HideAppBar = (props) => {
                       </MenuItem>
                     </Link>
 
-                    <Link component={RouterLink} to="/">
-                      <MenuItem
-                        onClick={handleCloseNavMenu}
-                        sx={{
-                          transition: "0.5s",
-
-                          "&:hover": {
-                            color: "#14A800",
-                            transform: "scale(0.9)",
-                          },
-                        }}
-                      >
-                        <Typography
-                          sx={{
-                            textAlign: "center",
-                            fontSize: "1.2em",
-                            fontFamily: "'Nunito', sans-serif",
-                            letterSpacing: "2px",
-                          }}
-                        >
-                          Recovered Cars
-                        </Typography>
-                      </MenuItem>
-                    </Link>
-
                     <HashLink smooth to="/#recent-blog-posts">
                       <MenuItem
                         onClick={handleCloseNavMenu}
@@ -331,30 +306,6 @@ const HideAppBar = (props) => {
                       }}
                     >
                       Stolen Cars
-                    </Button>
-                  </Link>
-
-                  <Link component={RouterLink} to="/">
-                    <Button
-                      onClick={handleCloseNavMenu}
-                      sx={{
-                        pt: 1,
-                        color: "#2491DF",
-                        display: "block",
-                        fontWeight: "boldest",
-                        fontFamily: "'Nunito', sans-serif",
-                        letterSpacing: "2px",
-                        background: " #edf1f7",
-                        fontSize: { md: "0.9em", lg: "1.0em" },
-                        marginLeft: "3em",
-                        transition: "0.5s",
-                        "&:hover": {
-                          color: "#14A800",
-                          transform: "scale(0.9)",
-                        },
-                      }}
-                    >
-                      Recovered Cars
                     </Button>
                   </Link>
 

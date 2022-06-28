@@ -50,10 +50,6 @@ img {
   -o-transition: 1s;
 }
 
-img:hover {
-  cursor: pointer;
-}
-
 h1,
 h2,
 h3,

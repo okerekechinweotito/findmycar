@@ -1,6 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
 import { FadeIn } from "../components/helperFunctions/FadeInAnimation";
+import ScrollToTop from "../components/helperFunctions/ScrollToTop";
 import CarCard from "../components/molecules/CarCard";
 import car1 from "../assets/stolenCars/car-1.jpg";
 import car2 from "../assets/stolenCars/car-2.jpg";
@@ -12,6 +13,7 @@ import car6 from "../assets/stolenCars/car-6.jpg";
 function StolenCars() {
   return (
     <Grid
+      id="database"
       sx={{
         width: "100vw",
         margin: "5em 0 0 0",
@@ -20,6 +22,7 @@ function StolenCars() {
         justifyContent: "center",
       }}
     >
+      <ScrollToTop />
       <section id="services" className="services">
         <div className="container ">
           <FadeIn>

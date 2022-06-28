@@ -5,7 +5,7 @@ import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
 import tipsImage from "../../../../assets/tipsImage.svg";
 function Tips() {
   return (
-    <section id="features" className="features">
+    <section id="tips" className="features">
       <FadeIn>
         <div className="container ">
           <div className="row feture-tabs ">

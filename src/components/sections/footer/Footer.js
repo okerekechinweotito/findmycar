@@ -9,6 +9,7 @@ import "./footer.css";
 import { FadeIn } from "../../helperFunctions/FadeInAnimation";
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Footer() {
   return (
@@ -36,21 +37,26 @@ function Footer() {
                 </li>
 
                 <li>
-                  <Link href="#about" className="footer-link">
+                  <HashLink smooth to="/#about" className="footer-link">
                     About us
-                  </Link>
+                  </HashLink>
                 </li>
 
                 <li>
-                  <Link href="#recent-blog-posts" className="footer-link">
+                  {" "}
+                  <HashLink
+                    smooth
+                    to="/#recent-blog-posts"
+                    className="footer-link"
+                  >
                     Our blog
-                  </Link>
+                  </HashLink>
                 </li>
 
                 <li>
-                  <Link href="#contact" className="footer-link">
+                  <HashLink smooth to="/#contact" className="footer-link">
                     Contact Us
-                  </Link>
+                  </HashLink>
                 </li>
               </ul>
 
@@ -60,27 +66,27 @@ function Footer() {
                 </li>
 
                 <li>
-                  <Link href="#services" className="footer-link">
+                  <HashLink smooth to="/#services" className="footer-link">
                     Services
-                  </Link>
+                  </HashLink>
                 </li>
 
                 <li>
-                  <Link href="#features" className="footer-link">
+                  <HashLink smooth to="/#tips" className="footer-link">
                     Tips
-                  </Link>
+                  </HashLink>
                 </li>
 
                 <li>
-                  <Link href="#values" className="footer-link">
+                  <HashLink smooth to="/#values" className="footer-link">
                     Values
-                  </Link>
+                  </HashLink>
                 </li>
 
                 <li>
-                  <Link href="#pricing" className="footer-link">
+                  <HashLink smooth to="/#pricing" className="footer-link">
                     Pricing Plans
-                  </Link>
+                  </HashLink>
                 </li>
               </ul>
 
@@ -90,13 +96,31 @@ function Footer() {
                 </li>
 
                 <li>
-                  <Link component={RouterLink} to="/" className="footer-link">
-                    Recovered Cars
+                  <Link
+                    component={RouterLink}
+                    to="/stolen-cars"
+                    className="footer-link"
+                  >
+                    Recently Stolen Vehicles
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="https://legitcar.ng/ "
+                    target="_blank"
+                    className="footer-link"
+                  >
+                    Verify Used Cars Before Purchase
                   </Link>
                 </li>
                 <li>
-                  <Link component={RouterLink} to="/" className="footer-link">
-                    Stolen Vehicles
+                  <Link
+                    href="https://www.recovermycar.com/"
+                    className="footer-link"
+                    target="_blank"
+                  >
+                    Sign up to a mobile app
                   </Link>
                 </li>
               </ul>
@@ -106,48 +130,48 @@ function Footer() {
             <ul className="social-list">
               <FadeIn>
                 <li>
-                  <Link href="#contact" className="social-link">
+                  <HashLink smooth to="/#contact" className="social-link">
                     <FacebookIcon className="footerIcon" />
-                  </Link>
+                  </HashLink>
                 </li>
               </FadeIn>
               <FadeIn>
                 <li>
-                  <Link href="#contact" className="social-link">
+                  <HashLink smooth to="/#contact" className="social-link">
                     <TwitterIcon className="footerIcon" />
-                  </Link>
+                  </HashLink>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <Link href="#contact" className="social-link">
+                  <HashLink smooth to="/#contact" className="social-link">
                     <InstagramIcon className="footerIcon" />
-                  </Link>
+                  </HashLink>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <Link href="#contact" className="social-link">
+                  <HashLink smooth to="/#contact" className="social-link">
                     <LinkedInIcon className="footerIcon" />
-                  </Link>
+                  </HashLink>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <Link href="#contact" className="social-link">
+                  <HashLink smooth to="/#contact" className="social-link">
                     <YouTubeIcon className="footerIcon" />
-                  </Link>
+                  </HashLink>
                 </li>
               </FadeIn>
 
               <FadeIn>
                 <li>
-                  <Link href="#contact" className="social-link">
+                  <HashLink smooth to="/#contact" className="social-link">
                     <ion-icon name="mail-outline"></ion-icon>
-                  </Link>
+                  </HashLink>
                 </li>
               </FadeIn>
             </ul>
