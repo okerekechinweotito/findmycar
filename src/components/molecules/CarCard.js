@@ -25,7 +25,7 @@ function CarCard({
     <FadeIn>
       <Box
         sx={{
-          width: { xs: "25em", md: "25em" },
+          width: { xs: "20em", sm: "22em", md: "25em" },
           backgroundColor: "#EDF1F7",
           borderRadius: "1em",
           border: "1px solid #fff",
@@ -50,7 +50,7 @@ function CarCard({
             component="span"
             sx={{
               fontFamily: "Nunito",
-              fontSize: "1.375rem",
+              fontSize: { xs: "1.1rem", md: "1.375rem" },
               cursor: "pointer",
               "&:hover": {
                 color: "#2491DF",
@@ -64,7 +64,7 @@ function CarCard({
             component="span"
             sx={{
               fontFamily: "Nunito",
-              fontSize: "0.875rem",
+              fontSize: { xs: "0.7rem", md: "0.875rem" },
               cursor: "pointer",
               border: "2px dashed #2491DF",
               borderRadius: "14px",
@@ -94,7 +94,7 @@ function CarCard({
               sx={{
                 display: "flex",
                 fontFamily: "Nunito",
-                fontSize: "1rem",
+                fontSize: { xs: "0.8rem", md: "1rem" },
                 cursor: "pointer",
                 margin: "0 0 1em 0",
 
@@ -104,7 +104,10 @@ function CarCard({
               }}
             >
               <ColorLensIcon
-                sx={{ color: "#2491DF", margin: "-1px 2px 0 0" }}
+                sx={{
+                  color: "#2491DF",
+                  margin: { xs: "-3px 2px 0 0", md: "-1px 2px 0 0" },
+                }}
               />{" "}
               <span> &nbsp; {carColor}</span>
             </Typography>
@@ -114,7 +117,7 @@ function CarCard({
               sx={{
                 display: "flex",
                 fontFamily: "Nunito",
-                fontSize: "1rem",
+                fontSize: { xs: "0.8rem", md: "1rem" },
                 cursor: "pointer",
                 margin: "0 0 1em 0",
 
@@ -123,7 +126,12 @@ function CarCard({
                 },
               }}
             >
-              <AddCardIcon sx={{ color: "#2491DF", margin: "-1px 2px 0 0" }} />{" "}
+              <AddCardIcon
+                sx={{
+                  color: "#2491DF",
+                  margin: { xs: "-3px 2px 0 0", md: "-1px 2px 0 0" },
+                }}
+              />{" "}
               <span> &nbsp; {carEngineNumber}</span>
             </Typography>
 
@@ -133,7 +141,7 @@ function CarCard({
               sx={{
                 display: "flex",
                 fontFamily: "Nunito",
-                fontSize: "1rem",
+                fontSize: { xs: "0.8rem", md: "1rem" },
                 cursor: "pointer",
                 margin: "0 0 0em 0",
 
@@ -142,19 +150,28 @@ function CarCard({
                 },
               }}
             >
-              <PeopleIcon sx={{ color: "#2491DF", margin: "-1px 2px 0 0" }} />{" "}
+              <PeopleIcon
+                sx={{
+                  color: "#2491DF",
+                  margin: { xs: "-3px 2px 0 0", md: "-1px 2px 0 0" },
+                }}
+              />{" "}
               <span> &nbsp; {carSeater}</span>
             </Typography>
           </Box>
 
-          <Box sx={{ margin: "1em 4em 0 0" }}>
+          <Box
+            sx={{
+              margin: { xs: "1em 0.7em 0 0", md: "1em 2em 0 0" },
+            }}
+          >
             <Typography
               variant="h6"
               component="span"
               sx={{
                 display: "flex",
                 fontFamily: "Nunito",
-                fontSize: "1rem",
+                fontSize: { xs: "0.8rem", md: "1rem" },
                 cursor: "pointer",
                 margin: "0 0 1em 0",
 
@@ -164,7 +181,10 @@ function CarCard({
               }}
             >
               <CreditCardIcon
-                sx={{ color: "#2491DF", margin: "-1px 2px 0 0" }}
+                sx={{
+                  color: "#2491DF",
+                  margin: { xs: "-3px 2px 0 0", md: "-1px 2px 0 0" },
+                }}
               />{" "}
               <span>&nbsp; {carPlateNumber}</span>
             </Typography>
@@ -175,7 +195,7 @@ function CarCard({
               sx={{
                 display: "flex",
                 fontFamily: "Nunito",
-                fontSize: "1rem",
+                fontSize: { xs: "0.8rem", md: "1rem" },
                 cursor: "pointer",
                 margin: "0 0 1em 0",
                 "&:hover": {
@@ -183,7 +203,12 @@ function CarCard({
                 },
               }}
             >
-              <GradientIcon sx={{ color: "#2491DF", margin: "-1px 2px 0 0" }} />{" "}
+              <GradientIcon
+                sx={{
+                  color: "#2491DF",
+                  margin: { xs: "-3px 2px 0 0", md: "-1px 2px 0 0" },
+                }}
+              />{" "}
               <span>&nbsp; {carTinted}</span>
             </Typography>
 
@@ -193,7 +218,7 @@ function CarCard({
               sx={{
                 display: "flex",
                 fontFamily: "Nunito",
-                fontSize: "1rem",
+                fontSize: { xs: "0.8rem", md: "1rem" },
                 cursor: "pointer",
                 margin: "0 0 0em 0",
                 "&:hover": {
@@ -202,7 +227,10 @@ function CarCard({
               }}
             >
               <NotListedLocationIcon
-                sx={{ color: "#2491DF", margin: "-1px 2px 0 0" }}
+                sx={{
+                  color: "#2491DF",
+                  margin: { xs: "-3px 2px 0 0", md: "-1px 2px 0 0" },
+                }}
               />{" "}
               <span> &nbsp; {locationOfTheft}</span>
             </Typography>
@@ -210,7 +238,7 @@ function CarCard({
         </Box>
         <hr
           style={{
-            width: "20em",
+            width: "15em",
             margin: " 1em auto",
           }}
         />
@@ -229,6 +257,7 @@ function CarCard({
               letterSpacing: "1px",
               fontFamily: "Nunito",
               cursor: "pointer",
+              fontSize: { xs: "1rem", md: "1.2rem" },
               "&:hover": {
                 color: "#2491DF",
               },
@@ -246,6 +275,7 @@ function CarCard({
                 margin: "-5px 0 0 0",
                 color: "#fff",
                 transition: "0.4s",
+                fontSize: { xs: "0.7rem", md: "0.7rem" },
                 borderRadius: "4px",
                 fontFamily: "Nunito",
                 letterSpacing: "3px",
