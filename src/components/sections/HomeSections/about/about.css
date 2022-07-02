@@ -1,0 +1,80 @@
+.about .content {
+  background-color: #f6f9ff;
+  padding: 40px;
+  box-shadow: 0px 10px 10px 10px rgba(1, 41, 112, 0.08);
+
+  /*   transition: 1s;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s; */
+}
+/* 
+.about img:hover {
+  transform: scale(0.9);
+}
+.about .content:hover {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+} */
+.about h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: rgb(36, 145, 223);
+  text-transform: uppercase;
+  margin: 0 0 2em 0;
+}
+
+.about h3:hover,
+.about h2:hover,
+.about p:hover {
+  transition: 0.1s;
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -ms-transition: 0.1s;
+  -o-transition: 0.1s;
+}
+.about h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(36, 145, 223);
+  margin: 0 0 1em 0;
+}
+.about p {
+  margin: 15px 0 30px 0;
+  line-height: 24px;
+  color: #7c7070;
+  font-size: 20px;
+}
+.about .btn-read-more {
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #4154f1;
+  box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+}
+.about .btn-read-more span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.about .btn-read-more i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.about .btn-read-more:hover i {
+  transform: translateX(5px);
+}

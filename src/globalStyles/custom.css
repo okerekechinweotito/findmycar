@@ -1,0 +1,125 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2491df;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf1f7;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scrollbar-color: #2491df #edf1f7;
+  scrollbar-width: 13px;
+  background-color: #edf1f7 !important;
+}
+
+a {
+  text-decoration: none !important	;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #14a800;
+}
+ul {
+  list-style: none;
+}
+
+p {
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+img {
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  color: rgb(36, 145, 223);
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+  background-color: #edf1f7;
+}
+
+input,
+textarea {
+  color: #2491df !important;
+  letter-spacing: 2px !important;
+  background-color: #edf1f7 !important	;
+}
+
+label {
+  color: #7f878e !important;
+  letter-spacing: 2px !important;
+  margin: 0 0 0.5em 0;
+}
+
+/* Material UI Built-in Classes */
+
+.MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.MuiButton-endIcon .MuiSvgIcon-root {
+  font-size: 2em !important;
+  position: relative;
+  bottom: -1px;
+}
+
+/* Classes and ID Specific */
+
+#headerBoxShadow.active {
+  box-shadow: 0 4px 4px rgba(170, 170, 170, 0.4);
+}
+
+.section-header {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.section-header h2 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: rgb(36, 145, 223);
+  text-transform: uppercase;
+}
+.section-header p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: rgb(36, 145, 223);
+}
+
+@media (max-width: 768px) {
+  .section-header p {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
