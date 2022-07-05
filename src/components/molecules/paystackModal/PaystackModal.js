@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import "./paystackModal.css";
+import { PaystackButton } from "react-paystack";
 
 function PaystackModal({ paystackAmount }) {
   const publicKey = "pk_test_6859b4629ef6ae1045e6137c50835ed125b395b2";
@@ -104,7 +105,7 @@ function PaystackModal({ paystackAmount }) {
                   className="col-md-12 text-center"
                   id="paystack-button-wrapper"
                 >
-                  <button> Pay Now</button>
+                  <PaystackButton {...componentProps} />
                 </div>
               </div>
             </form>
