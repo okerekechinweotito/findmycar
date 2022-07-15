@@ -178,8 +178,15 @@ function Footer() {
 
             <FadeIn>
               <p className="copyright">
-                &copy; 2022 <a href="#">Okereke Chinweotito</a>. All Rights
-                Reserved
+                &copy; 2022{" "}
+                <a
+                  href="https://www.okereke.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Okereke Chinweotito
+                </a>
+                . All Rights Reserved
               </p>
             </FadeIn>
           </div>

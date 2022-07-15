@@ -11,6 +11,34 @@ import car5 from "../assets/stolenCars/car-5.jpg";
 import car6 from "../assets/stolenCars/car-6.jpg";
 
 function StolenCars() {
+  /*  const [cars, setCars] = React.useState([]);
+
+  const mapCars = cars.map((car) => {
+    return (
+      <CarCard
+        key={car.title}
+        carImageLink={car1}
+        carNameModel={`Toyota RAV4`}
+        carYear={`2021`}
+        carColor={`Blue`}
+        carPlateNumber={`ABJ-234-2P`}
+        carEngineNumber={`842-3234-2512`}
+        carTinted={`Tinted Glass`}
+        carSeater={`4 Seater Vehicle`}
+        locationOfTheft={`Owerri`}
+        dateOfReport={`21 June 2022`}
+      />
+    );
+  });
+
+  React.useEffect(() => {
+    fetch(" https://jsonplaceholder.typicode.com/todos/")
+      .then((response) => response.json())
+      .then((response) => {
+        setCars(response);
+      });
+  }, []); */
+
   return (
     <Grid
       id="database"
