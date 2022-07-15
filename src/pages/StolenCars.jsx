@@ -32,7 +32,7 @@ function StolenCars() {
   });
 
   React.useEffect(() => {
-    fetch(" https://jsonplaceholder.typicode.com/todos/")
+    fetch(" https://jsonplaceholder.typicode.com/photos")
       .then((response) => response.json())
       .then((response) => {
         setCars(response);
