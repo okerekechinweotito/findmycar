@@ -1,6 +1,6 @@
 # Purpose and Usage
 
-FindMyCar is a prototype vehicle theft Recovery System website. Its major function is to receive stolen vehicle reports in my neighborhood and display details of all reports received for all to see.
+FindMyCar is a prototype vehicle theft Recovery System website, our mission is to aid the faster recovery of stolen vehicles by promoting stronger community policing. Its major function is to receive stolen vehicle reports in my neighborhood and display details of all reports received for all to see. The details of those reports are also forwarded to the Local Police for further action
 
 ### Click on 'File a Report' to lodge a vehicle theft report
 
