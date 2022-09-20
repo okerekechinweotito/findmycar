@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import AboutImage from "../../../../assets/aboutImage.jpg";
-import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../../utils/FadeInAnimation";
 
 function About() {
   return (

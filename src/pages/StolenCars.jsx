@@ -1,14 +1,14 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import { FadeIn } from "../components/helperFunctions/FadeInAnimation";
-import ScrollToTop from "../components/helperFunctions/ScrollToTop";
+import { FadeIn } from "../components/utils/FadeInAnimation";
+import ScrollToTop from "../components/utils/ScrollToTop";
 import CarCard from "../components/molecules/carCard/CarCard";
-import car1 from "../assets/stolenCars/car-1.jpg";
-import car2 from "../assets/stolenCars/car-2.jpg";
-import car3 from "../assets/stolenCars/car-3.jpg";
-import car4 from "../assets/stolenCars/car-4.jpg";
-import car5 from "../assets/stolenCars/car-5.jpg";
-import car6 from "../assets/stolenCars/car-6.jpg";
+import car1 from "../assets/stolenCars/car-1.webp";
+import car2 from "../assets/stolenCars/car-2.webp";
+import car3 from "../assets/stolenCars/car-3.webp";
+import car4 from "../assets/stolenCars/car-4.webp";
+import car5 from "../assets/stolenCars/car-5.webp";
+import car6 from "../assets/stolenCars/car-6.webp";
 
 function StolenCars() {
   /*  const [cars, setCars] = React.useState([]);
@@ -74,64 +74,65 @@ function StolenCars() {
           >
             <CarCard
               carImageLink={car1}
-              carNameModel={`Toyota RAV4`}
-              carYear={`2021`}
-              carColor={`Blue`}
-              carPlateNumber={`ABJ-234-2P`}
-              carEngineNumber={`842-3234-2512`}
-              carTinted={`Tinted Glass`}
+              carNameModel={`Toyota Matrix`}
+              carYear={`2004`}
+              carColor={`Silver`}
+              carPlateNumber={`JJJ-392GU`}
+              carEngineNumber={`5GZEV337X7J`}
+              carTinted={`Normal Glass `}
               carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Owerri`}
-              dateOfReport={`21 June 2022`}
+              locationOfTheft={`Orji, Owerri`}
+              dateOfReport={`13 September 2022`}
             />
 
             <CarCard
               carImageLink={car2}
-              carNameModel={`Toyota RAV4`}
-              carYear={`2021`}
-              carColor={`Blue`}
-              carPlateNumber={`ABJ-234-2P`}
-              carEngineNumber={`842-3234-2512`}
+              carNameModel={`Lexus ES 350`}
+              carYear={`2008`}
+              carColor={`White`}
+              carPlateNumber={`GWA-762BS`}
+              carEngineNumber={`4TISK2E7RU4`}
               carTinted={`Tinted Glass`}
               carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Owerri`}
-              dateOfReport={`21 June 2022`}
+              locationOfTheft={`MCC, Owerri`}
+              dateOfReport={`11th September 2022`}
             />
             <CarCard
               carImageLink={car3}
-              carNameModel={`Toyota RAV4`}
-              carYear={`2021`}
-              carColor={`Blue`}
-              carPlateNumber={`ABJ-234-2P`}
-              carEngineNumber={`842-3234-2512`}
-              carTinted={`Tinted Glass`}
+              carNameModel={`Toyota Camry`}
+              carYear={`2008`}
+              carColor={`Black`}
+              carPlateNumber={`ABC-186D0D`}
+              carEngineNumber={`2CNBJ134146`}
+              carTinted={`Normal Glass`}
               carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Owerri`}
-              dateOfReport={`21 June 2022`}
+              locationOfTheft={`Orji, Owerri`}
+              dateOfReport={`1st September 2022`}
             />
+
             <CarCard
               carImageLink={car4}
-              carNameModel={`Toyota RAV4`}
-              carYear={`2021`}
-              carColor={`Blue`}
-              carPlateNumber={`ABJ-234-2P`}
-              carEngineNumber={`842-3234-2512`}
+              carNameModel={`Lexus IS 250`}
+              carYear={`2009`}
+              carColor={`Silver`}
+              carPlateNumber={`KUJ-731BH`}
+              carEngineNumber={`4KLB4J1N29J`}
               carTinted={`Tinted Glass`}
               carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Owerri`}
-              dateOfReport={`21 June 2022`}
+              locationOfTheft={`Okwu, Owerri`}
+              dateOfReport={`29th August 2022`}
             />
             <CarCard
               carImageLink={car5}
               carNameModel={`Toyota RAV4`}
               carYear={`2021`}
               carColor={`Blue`}
-              carPlateNumber={`ABJ-234-2P`}
-              carEngineNumber={`842-3234-2512`}
-              carTinted={`Tinted Glass`}
+              carPlateNumber={`ABC-644LK`}
+              carEngineNumber={`JH4DC4350SS`}
+              carTinted={`Normal Glass`}
               carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Owerri`}
-              dateOfReport={`21 June 2022`}
+              locationOfTheft={`Control, Owerri`}
+              dateOfReport={`20th August 2022`}
             />
             <CarCard
               carImageLink={car6}
@@ -139,11 +140,11 @@ function StolenCars() {
               carYear={`2021`}
               carColor={`Blue`}
               carPlateNumber={`ABJ-234-2P`}
-              carEngineNumber={`842-3234-2512`}
+              carEngineNumber={`1GNDT13W5R2`}
               carTinted={`Tinted Glass`}
               carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Owerri`}
-              dateOfReport={`21 June 2022`}
+              locationOfTheft={`Aladimma, Owerri`}
+              dateOfReport={`10th August 2022`}
             />
           </Box>
         </div>

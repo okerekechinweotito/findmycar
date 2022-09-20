@@ -1,7 +1,7 @@
 import React from "react";
 import "./homePricingCard.css";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 import PaystackModal from "../paystackModal/PaystackModal";
 function HomePricingCard({
   plan,

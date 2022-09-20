@@ -7,7 +7,7 @@ import AddCardIcon from "@mui/icons-material/AddCard";
 import NotListedLocationIcon from "@mui/icons-material/NotListedLocation";
 import PeopleIcon from "@mui/icons-material/People";
 import { HashLink } from "react-router-hash-link";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 
 function CarCard({
   carImageLink,
@@ -33,7 +33,11 @@ function CarCard({
         }}
       >
         <Box
-          sx={{ padding: "0.7em", borderRadius: "1.5em" }}
+          sx={{
+            padding: "0.7em",
+            borderRadius: "1.5em",
+            height: "300px !important",
+          }}
           className="img-fluid"
           component="img"
           src={carImageLink}

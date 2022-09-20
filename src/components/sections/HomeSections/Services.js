@@ -1,6 +1,6 @@
 import React from "react";
 import HomeServicesCard from "../../molecules/servicesCard/homeServicesCard";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 import LocationOn from "@mui/icons-material/LocationOn";
 import ScreenLockRotation from "@mui/icons-material/ScreenLockRotation";
 import SupportAgent from "@mui/icons-material/SupportAgent";

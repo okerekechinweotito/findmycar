@@ -1,6 +1,6 @@
 import React from "react";
 import ValueCard from "../../molecules/valuesCard/HomeValueCard";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 import ValueImg1 from "../../../assets/valueimg1.svg";
 import ValueImg2 from "../../../assets/valueimg2.svg";
 import ValueImg3 from "../../../assets/valueimg3.svg";

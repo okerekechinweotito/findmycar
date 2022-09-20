@@ -1,7 +1,7 @@
 import React from "react";
 import "./tips.css";
 import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
-import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../../utils/FadeInAnimation";
 import tipsImage from "../../../../assets/tipsImage.svg";
 function Tips() {
   return (

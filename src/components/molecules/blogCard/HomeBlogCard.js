@@ -1,6 +1,6 @@
 import React from "react";
 import "./homeBlogCard.css";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 
 function HomeBlogCard({ date, title, src, link }) {
   return (
