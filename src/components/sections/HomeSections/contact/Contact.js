@@ -4,8 +4,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import PhoneInTalkOutlinedIcon from "@mui/icons-material/PhoneInTalkOutlined";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
-import EmailIcon from "@mui/icons-material/Email";
-import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../../utils/FadeInAnimation";
 import { Typography, Box, Modal, Fade, Backdrop, Button } from "@mui/material";
 
 function Contact() {

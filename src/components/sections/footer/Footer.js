@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import "./footer.css";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";

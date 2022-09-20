@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import HeroImage from "../../../../assets/heroImg.svg";
-import { FadeIn } from "../../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../../utils/FadeInAnimation";
 import HomeFormModal from "../../../molecules/reportModal/HomeFormModal";
 
 function HomeHero() {

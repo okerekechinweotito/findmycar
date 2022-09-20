@@ -5,7 +5,7 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Fade from "@mui/material/Fade";
-import HomeButton from "../../atoms/HomeButton";
+import HomeButton from "../homeButton/HomeButton";
 import "./homeFormModal.css";
 
 function HomeFormModal() {
@@ -68,6 +68,7 @@ function HomeFormModal() {
               method="POST"
               target="hiddenFrame"
               className="php-email-form"
+              enctype="multipart/form-data"
               onSubmit={handleShow}
             >
               <input type="hidden" name="_captcha" value="false" />
@@ -136,6 +137,7 @@ function HomeFormModal() {
                     title=" Upload Car Image"
                     className="form-control"
                     name="Car Image"
+                    accept="image/png, image/jpeg, image/jpg"
                     required
                   />
                 </div>{" "}

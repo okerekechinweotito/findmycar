@@ -14,7 +14,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import { FadeIn } from "../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../utils/FadeInAnimation";
 import { HashLink } from "react-router-hash-link";
 
 window.onscroll = function () {

@@ -1,5 +1,5 @@
 import React from "react";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 import HomePricingCard from "../../molecules/pricingCard/HomePricingCard";
 import GppBadIcon from "@mui/icons-material/GppBad";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";

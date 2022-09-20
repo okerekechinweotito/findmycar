@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Footer from "./components/sections/footer/Footer";
 import BackToTopButton from "./components/molecules/backToTopButton/BackToTopButton.js";
 import StolenCars from "./pages/StolenCars.jsx";
-import ScrollToTop from "./components/helperFunctions/ScrollToTop.js";
+import ScrollToTop from "./components/utils/ScrollToTop.js";
 
 export default function App() {
   return (

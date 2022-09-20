@@ -1,5 +1,5 @@
 import React from "react";
-import { FadeIn } from "../../helperFunctions/FadeInAnimation";
+import { FadeIn } from "../../utils/FadeInAnimation";
 import "./HomeServicesCard.css";
 
 function HomeServicesCard({ borderBottomColor, title, description, icon }) {
