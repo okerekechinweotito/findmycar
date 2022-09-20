@@ -124,9 +124,9 @@ function StolenCars() {
             />
             <CarCard
               carImageLink={car5}
-              carNameModel={`Toyota RAV4`}
-              carYear={`2021`}
-              carColor={`Blue`}
+              carNameModel={`Mitsubishi Spacestar`}
+              carYear={`2005`}
+              carColor={`Gold`}
               carPlateNumber={`ABC-644LK`}
               carEngineNumber={`JH4DC4350SS`}
               carTinted={`Normal Glass`}
@@ -136,10 +136,10 @@ function StolenCars() {
             />
             <CarCard
               carImageLink={car6}
-              carNameModel={`Toyota RAV4`}
-              carYear={`2021`}
-              carColor={`Blue`}
-              carPlateNumber={`ABJ-234-2P`}
+              carNameModel={`Honda Accord`}
+              carYear={`2005`}
+              carColor={`White`}
+              carPlateNumber={`EFR-10BK`}
               carEngineNumber={`1GNDT13W5R2`}
               carTinted={`Tinted Glass`}
               carSeater={`4 Seater Vehicle`}
