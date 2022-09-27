@@ -3,42 +3,27 @@ import React from "react";
 import { FadeIn } from "../components/utils/FadeInAnimation";
 import ScrollToTop from "../components/utils/ScrollToTop";
 import CarCard from "../components/molecules/carCard/CarCard";
-import car1 from "../assets/stolenCars/car-1.webp";
-import car2 from "../assets/stolenCars/car-2.webp";
-import car3 from "../assets/stolenCars/car-3.webp";
-import car4 from "../assets/stolenCars/car-4.webp";
-import car5 from "../assets/stolenCars/car-5.webp";
-import car6 from "../assets/stolenCars/car-6.webp";
+import { database } from "../firebase/config";
+import { onValue, ref as ref_database } from "firebase/database";
 
 function StolenCars() {
-  /*  const [cars, setCars] = React.useState([]);
+  const [data, setData] = React.useState();
+  const fetchData = () => {
+    const databaseRef = ref_database(database, `carDetails`);
+    onValue(databaseRef, (snapshot) => {
+      const dataObject = snapshot.val();
 
-  const mapCars = cars.map((car) => {
-    return (
-      <CarCard
-        key={car.title}
-        carImageLink={car1}
-        carNameModel={`Toyota RAV4`}
-        carYear={`2021`}
-        carColor={`Blue`}
-        carPlateNumber={`ABJ-234-2P`}
-        carEngineNumber={`842-3234-2512`}
-        carTinted={`Tinted Glass`}
-        carSeater={`4 Seater Vehicle`}
-        locationOfTheft={`Owerri`}
-        dateOfReport={`21 June 2022`}
-      />
-    );
-  });
+      const data = Object.keys(dataObject).map((key) => {
+        return dataObject[key];
+      });
+      setData(data);
+      console.log(data);
+    });
+  };
 
   React.useEffect(() => {
-    fetch(" https://jsonplaceholder.typicode.com/photos")
-      .then((response) => response.json())
-      .then((response) => {
-        setCars(response);
-      });
-  }, []); */
-
+    fetchData();
+  }, []);
   return (
     <Grid
       id="database"
@@ -72,80 +57,23 @@ function StolenCars() {
               marginTop: "2em",
             }}
           >
-            <CarCard
-              carImageLink={car1}
-              carNameModel={`Toyota Matrix`}
-              carYear={`2004`}
-              carColor={`Silver`}
-              carPlateNumber={`JJJ-392GU`}
-              carEngineNumber={`5GZEV337X7J`}
-              carTinted={`Normal Glass `}
-              carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Orji, Owerri`}
-              dateOfReport={`13 September 2022`}
-            />
-
-            <CarCard
-              carImageLink={car2}
-              carNameModel={`Lexus ES 350`}
-              carYear={`2008`}
-              carColor={`White`}
-              carPlateNumber={`GWA-762BS`}
-              carEngineNumber={`4TISK2E7RU4`}
-              carTinted={`Tinted Glass`}
-              carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`MCC, Owerri`}
-              dateOfReport={`11th September 2022`}
-            />
-            <CarCard
-              carImageLink={car3}
-              carNameModel={`Toyota Camry`}
-              carYear={`2008`}
-              carColor={`Black`}
-              carPlateNumber={`ABC-186D0D`}
-              carEngineNumber={`2CNBJ134146`}
-              carTinted={`Normal Glass`}
-              carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Orji, Owerri`}
-              dateOfReport={`1st September 2022`}
-            />
-
-            <CarCard
-              carImageLink={car4}
-              carNameModel={`Lexus IS 250`}
-              carYear={`2009`}
-              carColor={`Silver`}
-              carPlateNumber={`KUJ-731BH`}
-              carEngineNumber={`4KLB4J1N29J`}
-              carTinted={`Tinted Glass`}
-              carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Okwu, Owerri`}
-              dateOfReport={`29th August 2022`}
-            />
-            <CarCard
-              carImageLink={car5}
-              carNameModel={`Mitsubishi Spacestar`}
-              carYear={`2005`}
-              carColor={`Gold`}
-              carPlateNumber={`ABC-644LK`}
-              carEngineNumber={`JH4DC4350SS`}
-              carTinted={`Normal Glass`}
-              carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Control, Owerri`}
-              dateOfReport={`20th August 2022`}
-            />
-            <CarCard
-              carImageLink={car6}
-              carNameModel={`Honda Accord`}
-              carYear={`2005`}
-              carColor={`White`}
-              carPlateNumber={`EFR-10BK`}
-              carEngineNumber={`1GNDT13W5R2`}
-              carTinted={`Tinted Glass`}
-              carSeater={`4 Seater Vehicle`}
-              locationOfTheft={`Aladimma, Owerri`}
-              dateOfReport={`10th August 2022`}
-            />
+            {data?.map((car) => {
+              return (
+                <CarCard
+                  key={car.id}
+                  carImageLink={car.imageLink}
+                  carNameModel={car.name}
+                  carYear={car.year}
+                  carColor={car.color}
+                  carPlateNumber={car.plateNumber}
+                  carEngineNumber={car.engineNumber}
+                  carTinted={car.glass}
+                  carSeater={car.seater}
+                  locationOfTheft={car.location}
+                  dateOfReport={car.date}
+                />
+              );
+            })}
           </Box>
         </div>
       </section>

@@ -7,11 +7,117 @@ import Typography from "@mui/material/Typography";
 import Fade from "@mui/material/Fade";
 import HomeButton from "../homeButton/HomeButton";
 import "./homeFormModal.css";
+import { storage } from "../../../firebase/config";
+import { database } from "../../../firebase/config";
+import {
+  getDownloadURL,
+  ref as ref_storage,
+  uploadBytesResumable,
+} from "firebase/storage";
+import { set, ref as ref_database } from "firebase/database";
+import { uid } from "uid";
+import { Link } from "react-router-dom";
+import { upload } from "@testing-library/user-event/dist/upload";
 
 function HomeFormModal() {
-  const [open, setOpen] = React.useState(false);
+  const [victimName, setVictimName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
+  const [address, setAddress] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [year, setYear] = React.useState("");
+  const [plateNumber, setPlateNumber] = React.useState("");
+  const [engineNumber, setEngineNumber] = React.useState("");
+  const [color, setColor] = React.useState("");
+  const [seater, setSeater] = React.useState("");
+  const [location, setLocation] = React.useState("");
+  const [date, setDate] = React.useState("");
+  const [description, setDescription] = React.useState("");
+  const [type, setType] = React.useState("");
+  const [glass, setGlass] = React.useState("");
+  const [imageUpload, setImageUpload] = React.useState("");
+  const [queryId, setQueryId] = React.useState("");
+  const [uploadProgress, setUploadProgress] = React.useState("");
 
+  const [open, setOpen] = React.useState(false);
   const [show, setShow] = React.useState(false);
+
+  const uploadDetails = (url) => {
+    console.log(url);
+    set(ref_database(database, `carDetails/${queryId}`), {
+      victimName,
+      email,
+      phoneNumber,
+      address,
+      name,
+      year,
+      plateNumber,
+      engineNumber,
+      color,
+      seater,
+      location,
+      date,
+      description,
+      type,
+      glass,
+      imageLink: url,
+      id: queryId,
+    });
+  };
+
+  const uploadImage = async () => {
+    if (imageUpload === null) return;
+    const storageRef = ref_storage(storage, `carImages/${queryId}`);
+    const uploadTask = uploadBytesResumable(storageRef, imageUpload);
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progressDecimal =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        const progress = Math.trunc(progressDecimal);
+        setUploadProgress(progress);
+      },
+      null,
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          uploadDetails(downloadURL);
+        });
+      }
+    );
+  };
+
+  const createNewCar = async (e) => {
+    e.preventDefault();
+    uploadImage();
+    handleShow();
+  };
+
+  const handleLoader = () => {
+    if (uploadProgress < 100) {
+      return <div> Please wait... Uploading {uploadProgress}% </div>;
+    } else {
+      return (
+        <div>
+          Upload Complete ! Your stolen-car details has been added to our
+          database and will be forwarded to the relevant security agencies, they
+          may contact you as need be. <br /> <br />{" "}
+          <Link to="/stolen-cars">
+            {" "}
+            <i
+              style={{
+                color: "#14A800",
+                cursor: "pointer",
+              }}
+            >
+              {" "}
+              View our Database
+            </i>
+          </Link>
+        </div>
+      );
+    }
+  };
+
   const handleShow = (e) => {
     const timeout = setTimeout(() => {
       setShow(true);
@@ -64,12 +170,9 @@ function HomeFormModal() {
             </div>
             <form
               id="form"
-              action="https://formsubmit.co/findmycar.nigeria@gmail.com"
-              method="POST"
-              target="hiddenFrame"
               className="php-email-form"
-              enctype="multipart/form-data"
-              onSubmit={handleShow}
+              encType="multipart/form-data"
+              onSubmit={createNewCar}
             >
               <input type="hidden" name="_captcha" value="false" />
 
@@ -80,6 +183,8 @@ function HomeFormModal() {
                     name="Name Of Victim"
                     className="form-control"
                     placeholder="Your Name"
+                    value={victimName}
+                    onChange={(e) => setVictimName(e.target.value)}
                     required
                   />
                 </div>
@@ -89,43 +194,151 @@ function HomeFormModal() {
                     className="form-control"
                     name="Email Address"
                     placeholder="Your Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                 </div>
-                <div className="col-md-12">
+                <div className="col-md-6">
                   <input
                     type="tel"
                     className="form-control"
                     name="Telephone Number"
                     placeholder="Phone Number"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                     required
                   />
                 </div>
-                <div className="col-md-12">
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Address"
+                    placeholder="Address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Car Name / Model"
+                    placeholder="Car Name  eg (Toyota Corolla)"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
                   <input
                     type="text"
                     className="form-control"
                     name="Car Name / Model / Year"
-                    placeholder="Car Name / Model / Year  eg (Toyota/Corolla/2022)"
+                    placeholder="Model Year  eg (2009)"
+                    value={year}
+                    onChange={(e) => setYear(e.target.value)}
                     required
                   />
-                </div>{" "}
-                <div className="col-md-12">
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Plate Number "
+                    placeholder="Plate Number eg (GWA-392GU)"
+                    value={plateNumber}
+                    onChange={(e) => setPlateNumber(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
                   <input
                     type="text"
                     className="form-control"
                     name="Plate Number / Engine Number"
-                    placeholder="Plate Number / Engine Number"
+                    placeholder="Engine Number eg (5GZEV337X7J)"
+                    value={engineNumber}
+                    onChange={(e) => setEngineNumber(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Color"
+                    placeholder="Color eg (White)"
+                    value={color}
+                    onChange={(e) => setColor(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Seat Count"
+                    placeholder="Seat Count eg (4 Seater Vehicle)"
+                    value={seater}
+                    onChange={(e) => setSeater(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Vehicle Type"
+                    placeholder="Vehicle Type eg (Bus / SUV / Salon /Truck)"
+                    value={type}
+                    onChange={(e) => setType(e.target.value)}
+                    required
+                  />
+                </div>{" "}
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Tinted"
+                    placeholder="Tinted eg (Normal Glass / Tinted Glass )"
+                    value={glass}
+                    onChange={(e) => setGlass(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Location"
+                    placeholder="Location of theft eg (Orji, Owerri)"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="col-md-6">
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="Date"
+                    placeholder="Date eg ( 27th August 2022)"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
                     required
                   />
                 </div>
                 <div className="col-md-12">
                   <textarea
                     className="form-control"
-                    name="Location plus additional information"
+                    name="Additional information"
                     rows="6"
-                    placeholder="Describe Location of theft plus any additional information"
-                    required
+                    placeholder="Further description plus any Additional Information"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
                   ></textarea>
                 </div>
                 <div className="col-md-12">
@@ -137,7 +350,11 @@ function HomeFormModal() {
                     title=" Upload Car Image"
                     className="form-control"
                     name="Car Image"
-                    accept="image/png, image/jpeg, image/jpg"
+                    accept="image/*"
+                    onChange={(e) => {
+                      setImageUpload(e.target.files[0]);
+                      setQueryId(uid());
+                    }}
                     required
                   />
                 </div>{" "}
@@ -211,8 +428,7 @@ function HomeFormModal() {
                 color: "#2491df",
               }}
             >
-              Your details have been forwarded to the relevant security
-              agencies. We would get back to you shortly
+              {handleLoader()}
             </Typography>
           </Box>
         </Box>
